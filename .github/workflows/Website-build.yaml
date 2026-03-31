@@ -14,7 +14,7 @@ on:
         type: string
 
 env:
-  DEPLOYMENT_FOLDER: public
+  DEPLOYMENT_FOLDER: out
   NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY: 176332d2-7433-4cb6-a30e-601e1c3639d2
 
 jobs:

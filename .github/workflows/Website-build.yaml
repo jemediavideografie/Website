@@ -15,6 +15,7 @@ on:
 
 env:
   DEPLOYMENT_FOLDER: public
+  NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY: 176332d2-7433-4cb6-a30e-601e1c3639d2
 
 jobs:
 # Please do not rename this job

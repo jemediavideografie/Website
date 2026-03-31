@@ -56,32 +56,39 @@ export function ContactForm() {
     setFieldErrors({});
     setSubmitState("loading");
 
+    if (Date.now() - formStartedAt < 3000) {
+      setSubmitState("error");
+      setMessage("Bitte versuche es erneut.");
+      return;
+    }
+
     const payload = {
+      access_key: process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY ?? "",
+      subject: `Neue Anfrage (${data.projectType ?? "Sonstiges"}) von ${data.name}`,
       name: data.name,
       email: data.email,
       phone: data.phone ?? "",
-      preferredContact: data.preferredContact ?? "",
-      projectType: data.projectType ?? "",
-      weddingLocation: data.weddingLocation ?? "",
-      weddingDate: data.weddingDate ?? "",
-      carLocation: data.carLocation ?? "",
-      carLocationOther: data.carLocationOther ?? "",
-      preferredDate: data.preferredDate ?? "",
-      details: data.details ?? "",
-      website: data.website ?? "",
-      formStartedAt: Number(data.formStartedAt ?? formStartedAt),
+      "Bevorzugter Kontaktweg": data.preferredContact ?? "",
+      "Projektart": data.projectType ?? "",
+      "Ort Hochzeit": data.weddingLocation ?? "",
+      "Datum Hochzeit": data.weddingDate ?? "",
+      "Grober Ort (Automotive)": data.carLocation ?? "",
+      "Andere Region (Automotive)": data.carLocationOther ?? "",
+      "Wunschtermin (Automotive)": data.preferredDate ?? "",
+      message: data.details ?? "",
+      botcheck: data.website ?? "",
     };
 
     try {
-      const response = await fetch("/api/contact", {
+      const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
         body: JSON.stringify(payload),
       });
 
-      const result = (await response.json()) as { message?: string };
+      const result = (await response.json()) as { success?: boolean; message?: string };
 
-      if (!response.ok) {
+      if (!response.ok || !result.success) {
         throw new Error(result.message ?? "Die Nachricht konnte nicht gesendet werden.");
       }
 

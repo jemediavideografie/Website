@@ -41,15 +41,15 @@ export default function DatenschutzPage() {
           und eure Nachricht).
         </p>
 
-        <h2>Kontaktformular (Versand per Resend)</h2>
+        <h2>Kontaktformular (Versand per Web3Forms)</h2>
         <p>
-          Wenn ihr das Kontaktformular ausfüllt und absendet, wird eure Anfrage über die Server-Infrastruktur
-          verarbeitet und anschließend als E-Mail über den Dienst <strong>Resend</strong> versendet.
-          Dabei fungiert Resend als Auftragsverarbeiter. Mit Resend haben wir – soweit erforderlich – einen
-          Vertrag zur Auftragsverarbeitung (AVV) nach Art. 28 DSGVO abgeschlossen.
+          Wenn ihr das Kontaktformular ausfüllt und absendet, wird eure Anfrage über den Dienst{" "}
+          <strong>Web3Forms</strong> (web3forms.com) verarbeitet und als E-Mail weitergeleitet.
+          Dabei fungiert Web3Forms als Auftragsverarbeiter. Mit Web3Forms haben wir – soweit erforderlich –
+          einen Vertrag zur Auftragsverarbeitung (AVV) nach Art. 28 DSGVO abgeschlossen.
         </p>
         <p>
-          Resend ist ein US-amerikanischer Dienst. Dadurch kann es im Rahmen der Verarbeitung zu einer
+          Web3Forms ist ein US-amerikanischer Dienst. Dadurch kann es im Rahmen der Verarbeitung zu einer
           Übermittlung personenbezogener Daten in Drittländer kommen. Wir stellen hierfür geeignete Garantien
           bereit, z.B. auf Grundlage von Standardvertragsklauseln (Art. 46 DSGVO) mit geeigneten zusätzlichen
           Schutzmaßnahmen.
@@ -114,7 +114,7 @@ export default function DatenschutzPage() {
           für die Verarbeitung eurer Anfrage.
         </p>
 
-        <p className="muted">Letzte Aktualisierung: 25.03.2026</p>
+        <p className="muted">Letzte Aktualisierung: 05.04.2026</p>
       </div>
     </section>
   );

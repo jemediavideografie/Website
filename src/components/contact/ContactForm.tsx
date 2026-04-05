@@ -5,7 +5,7 @@ import { FormEvent, useState } from "react";
 type SubmitState = "idle" | "loading" | "success" | "error";
 
 type FieldErrors = Partial<Record<
-  "name" | "email" | "preferredContact" | "weddingLocation" | "weddingDate" | "carLocation" | "carLocationOther" | "preferredDate" | "details",
+  "name" | "email" | "preferredContact" | "instagramHandle" | "weddingLocation" | "weddingDate" | "carLocation" | "carLocationOther" | "preferredDate" | "details",
   string
 >>;
 
@@ -14,6 +14,9 @@ function validateClient(data: Record<string, string>): FieldErrors {
   if (!data.name || data.name.trim().length < 2) errors.name = "Bitte einen gültigen Namen angeben.";
   if (!data.email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)) errors.email = "Bitte eine gültige E-Mail-Adresse angeben.";
   if (!data.preferredContact) errors.preferredContact = "Bitte einen bevorzugten Kontaktweg angeben.";
+  if (data.preferredContact === "Instagram" && (!data.instagramHandle || data.instagramHandle.trim().length < 1)) {
+    errors.instagramHandle = "Bitte deinen Instagram-Namen angeben.";
+  }
   if (data.projectType === "Hochzeit") {
     if (!data.weddingLocation || data.weddingLocation.trim().length < 2) errors.weddingLocation = "Bitte den Ort der Hochzeit angeben.";
     if (!data.weddingDate) errors.weddingDate = "Bitte ein Hochzeitsdatum angeben.";
@@ -35,6 +38,7 @@ export function ContactForm() {
   const [preferredContact, setPreferredContact] = useState("");
   const [projectType, setProjectType] = useState("");
   const [carLocation, setCarLocation] = useState("");
+  const [instagramHandle, setInstagramHandle] = useState("");
   const [fieldErrors, setFieldErrors] = useState<FieldErrors>({});
   const [formStartedAt] = useState(() => Date.now());
 
@@ -69,6 +73,7 @@ export function ContactForm() {
       email: data.email,
       phone: data.phone ?? "",
       "Bevorzugter Kontaktweg": data.preferredContact ?? "",
+      "Instagram-Name": data.instagramHandle ?? "",
       "Projektart": data.projectType ?? "",
       "Ort Hochzeit": data.weddingLocation ?? "",
       "Datum Hochzeit": data.weddingDate ?? "",
@@ -98,6 +103,7 @@ export function ContactForm() {
       setPreferredContact("");
       setProjectType("");
       setCarLocation("");
+      setInstagramHandle("");
       return;
     } catch (error) {
       setSubmitState("error");
@@ -157,6 +163,22 @@ export function ContactForm() {
           </select>
           {fieldErrors.preferredContact && <span id="err-preferredContact" className="field-error">{fieldErrors.preferredContact}</span>}
         </label>
+        {preferredContact === "Instagram" && (
+          <label>
+            Instagram-Name *
+            <input
+              name="instagramHandle"
+              type="text"
+              required
+              placeholder="@dein_name"
+              value={instagramHandle}
+              onChange={(event) => setInstagramHandle(event.target.value)}
+              aria-describedby={fieldErrors.instagramHandle ? "err-instagramHandle" : undefined}
+              aria-invalid={!!fieldErrors.instagramHandle}
+            />
+            {fieldErrors.instagramHandle && <span id="err-instagramHandle" className="field-error">{fieldErrors.instagramHandle}</span>}
+          </label>
+        )}
         <label>
           Projektart *
           <select

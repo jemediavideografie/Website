@@ -29,7 +29,11 @@ export default function ImpressumPage() {
           E-Mail: <a href="mailto:Je.Media.videografie@gmail.com">Je.Media.videografie@gmail.com</a>
         </p>
 
-        <p>Umsatzsteuerbefreit (Kleinunternehmerregelung)</p>
+        <p>
+          Umsatzsteuerbefreit (Kleinunternehmerregelung)
+          <br />
+          W-IdNr.: DE461718625
+        </p>
 
         <p>
           Wir sind zur Teilnahme an einem Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle

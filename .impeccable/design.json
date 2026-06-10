@@ -1,0 +1,127 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-05-20T00:00:00.000Z",
+  "title": "Design System: JE Media",
+  "extensions": {
+    "colorMeta": {
+      "midnight-ink":     { "role": "neutral", "displayName": "Midnight Ink",     "canonical": "oklch(7% 0.01 240)",  "tonalRamp": ["#030407","#070910","#0b0d12","#111622","#1a2130","#252c3a","#344058","#4a5a78"] },
+      "screening-room":   { "role": "neutral", "displayName": "Screening Room",   "canonical": "oklch(11% 0.015 240)", "tonalRamp": ["#060810","#0b0f18","#121722","#1a2233","#222d45","#2e3d5c","#3f5580","#5070a0"] },
+      "deep-frame":       { "role": "neutral", "displayName": "Deep Frame",       "canonical": "oklch(14% 0.015 240)", "tonalRamp": ["#080c16","#0e1422","#1a2130","#222b3e","#2d3a55","#3d4f70","#546a90","#7090b8"] },
+      "dark-border":      { "role": "neutral", "displayName": "Dark Border",      "canonical": "oklch(18% 0.012 240)", "tonalRamp": ["#0c1020","#141b2e","#1e2840","#252c3a","#303d55","#3e5070","#5570a0","#7090c8"] },
+      "silver-grain":     { "role": "neutral", "displayName": "Silver Grain",     "canonical": "oklch(72% 0.02 235)",  "tonalRamp": ["#2a2e38","#404855","#596375","#7080a0","#8898b8","#a7b0c0","#c8d0de","#e8ecf2"] },
+      "soft-projection":  { "role": "neutral", "displayName": "Soft Projection",  "canonical": "oklch(97% 0.005 240)", "tonalRamp": ["#6070a0","#8898c0","#a8b8d8","#c8d4e8","#dce4f0","#ecf0f8","#f5f7fa","#ffffff"] },
+      "amber-filament":   { "role": "primary", "displayName": "Amber Filament",   "canonical": "oklch(74% 0.12 72)",   "tonalRamp": ["#1f1506","#3a2a0d","#5a3f12","#7e5c1c","#a97d30","#d7ad63","#e8c98a","#f5e8c9"] }
+    },
+    "typographyMeta": {
+      "display":  { "displayName": "Display",  "purpose": "Hero headlines (H1). The primary emotional statement. One per page." },
+      "headline": { "displayName": "Headline", "purpose": "Section headings (H2). Page titles, major content dividers." },
+      "title":    { "displayName": "Title",    "purpose": "Card headings, process step names (H3). Third hierarchy tier." },
+      "script":   { "displayName": "Script Eyebrow", "purpose": "Pre-heading eyebrows only. Always paired immediately above a Cinzel heading. Never standalone." },
+      "body":     { "displayName": "Body",     "purpose": "All prose, descriptions, FAQ answers. Max 65-75ch line length." },
+      "label":    { "displayName": "Label",    "purpose": "Process numbers, badge text, pricing labels, Coming Soon caption." }
+    },
+    "shadows": [
+      { "name": "header-blur",   "value": "backdrop-filter: blur(14px); background: rgba(11,13,18,0.8)",             "purpose": "Sticky header only. Structural legibility on scroll. Not decorative." },
+      { "name": "btn-hover",     "value": "transform: translateY(-1px)",                                             "purpose": "All button hover states. The only permitted hover motion in the system." },
+      { "name": "tab-active",    "value": "box-shadow: 0 14px 30px rgba(215, 173, 99, 0.35)",                        "purpose": "Active tab/chip only. Signals selected filter state." },
+      { "name": "focus-ring",    "value": "box-shadow: 0 0 0 3px rgba(215,173,99,0.18); border-color: rgba(215,173,99,0.9)", "purpose": "Form input focus state." }
+    ],
+    "motion": [
+      { "name": "standard",     "value": "cubic-bezier(0.4, 0, 0.2, 1)", "purpose": "Default easing for state transitions (nav logo, button hover)." },
+      { "name": "faq-open",     "value": "cubic-bezier(0.07, 0.82, 0.16, 1)", "purpose": "Accordion panels opening. Slightly springier for organic feel." },
+      { "name": "draw-stroke",  "value": "cubic-bezier(0.4, 0, 0.2, 1) infinite 4.2s", "purpose": "Showreel F animation. Stroke-dashoffset keyframe animation." }
+    ],
+    "breakpoints": [
+      { "name": "mobile", "value": "900px", "purpose": "Single breakpoint. Below: stack grids, show mobile nav, hide desktop logo." }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Gold fill, pill shape. Primary conversion action. Footer CTA and hero only.",
+      "html": "<button class=\"ds-btn-primary\">Anfrage stellen</button>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; justify-content: center; border-radius: 999px; border: 1px solid rgba(215,173,99,0.95); background: rgba(215,173,99,0.95); color: #0b0d12; font-weight: 600; font-size: 1rem; padding: 0.55rem 1.1rem; transition: transform 0.2s ease; cursor: pointer; white-space: nowrap; font-family: Inter, system-ui, sans-serif; } .ds-btn-primary:hover { transform: translateY(-1px); } .ds-btn-primary:focus-visible { outline: 3px solid rgba(215,173,99,0.55); outline-offset: 2px; } .ds-btn-primary:disabled { opacity: 0.65; cursor: not-allowed; transform: none; }"
+    },
+    {
+      "name": "Ghost Button",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Transparent with amber border. Secondary action alongside a primary button.",
+      "html": "<button class=\"ds-btn-ghost\">Mehr erfahren</button>",
+      "css": ".ds-btn-ghost { display: inline-flex; align-items: center; justify-content: center; border-radius: 999px; border: 1px solid rgba(215,173,99,0.98); background: rgba(215,173,99,0.07); color: #f5f7fa; font-weight: 600; font-size: 1rem; padding: 0.55rem 1.1rem; transition: background 0.2s ease, transform 0.2s ease; cursor: pointer; white-space: nowrap; font-family: Inter, system-ui, sans-serif; text-shadow: 0 10px 30px rgba(0,0,0,0.75); } .ds-btn-ghost:hover { background: rgba(11,13,18,0.65); transform: translateY(-1px); } .ds-btn-ghost:focus-visible { outline: 3px solid rgba(215,173,99,0.55); outline-offset: 2px; }"
+    },
+    {
+      "name": "Content Card",
+      "kind": "card",
+      "refersTo": "card",
+      "description": "Dark gradient card. Used for process steps, service descriptions, feature content.",
+      "html": "<article class=\"ds-card\"><h3 class=\"ds-card-title\">Kennenlerngespräch</h3><p class=\"ds-card-body\">Wir sprechen über euren Tag, eure Wünsche und den gewünschten Look.</p></article>",
+      "css": ".ds-card { border: 1px solid #252c3a; background: linear-gradient(155deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02)); border-radius: 16px; padding: 1.1rem; } .ds-card-title { font-family: 'Cinzel', Georgia, serif; font-weight: 700; font-size: 1.05rem; letter-spacing: 0.02em; color: #f5f7fa; margin: 0 0 0.5rem; } .ds-card-body { color: #a7b0c0; line-height: 1.65; margin: 0; font-size: 1rem; }"
+    },
+    {
+      "name": "Testimonial Card",
+      "kind": "card",
+      "description": "Quote card for couple testimonials. Script opening quote mark, author attribution below.",
+      "html": "<article class=\"ds-testimonial\"><p class=\"ds-testimonial-quote\">Joel hat unseren Hochzeitstag so wunderschön festgehalten. Der Film hat uns beide zu Tränen gerührt.</p><div><p class=\"ds-testimonial-author\">Anna &amp; Markus</p><p class=\"ds-testimonial-date\">Hochzeit 2024</p></div></article>",
+      "css": ".ds-testimonial { border: 1px solid #252c3a; border-radius: 16px; padding: 1.5rem; background: linear-gradient(155deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01)); display: flex; flex-direction: column; gap: 1rem; } .ds-testimonial-quote { color: #a7b0c0; line-height: 1.72; flex: 1; font-style: italic; margin: 0; font-size: 1rem; } .ds-testimonial-quote::before { content: '\\201C'; font-family: 'Great Vibes', cursive; color: #d7ad63; font-size: 3rem; line-height: 0; vertical-align: -0.7rem; margin-right: 0.15rem; font-style: normal; } .ds-testimonial-author { font-weight: 700; color: #f5f7fa; font-size: 0.95rem; margin: 0; } .ds-testimonial-date { font-size: 0.8rem; color: #d7ad63; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; margin: 0.2rem 0 0; }"
+    },
+    {
+      "name": "FAQ Accordion Item",
+      "kind": "custom",
+      "description": "Expandable Q&A. Amber toggle icon, gradient tint when open. Used for FAQ and pricing.",
+      "html": "<div class=\"ds-faq\" data-open=\"false\"><button class=\"ds-faq-summary\" onclick=\"this.closest('.ds-faq').dataset.open = this.closest('.ds-faq').dataset.open === 'true' ? 'false' : 'true'; this.closest('.ds-faq').querySelector('.ds-faq-panel').style.maxHeight = this.closest('.ds-faq').dataset.open === 'true' ? '400px' : '0'; this.closest('.ds-faq').querySelector('.ds-faq-panel').style.opacity = this.closest('.ds-faq').dataset.open === 'true' ? '1' : '0';\">Wie läuft die Buchung ab?</button><div class=\"ds-faq-panel\" style=\"max-height:0;opacity:0;\"><p>Alles fängt mit eurer Buchungsanfrage an. Falls euer Tag noch frei ist, reserviere ich ihn für euch.</p></div></div>",
+      "css": ".ds-faq { border: 1px solid #252c3a; border-radius: 16px; background: linear-gradient(155deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01)); overflow: hidden; transition: border-color 200ms ease; } .ds-faq[data-open='true'] { border-color: rgba(215,173,99,0.7); background: linear-gradient(155deg, rgba(215,173,99,0.09), #121722); } .ds-faq-summary { width: 100%; text-align: left; cursor: pointer; background: transparent; border: 0; padding: 1rem 2.6rem 1rem 1.1rem; font-weight: 800; font-size: 1.03rem; color: #f5f7fa; position: relative; line-height: 1.45; font-family: 'Cinzel', Georgia, serif; letter-spacing: 0.02em; } .ds-faq-summary::after { content: '+'; position: absolute; right: 1.05rem; top: 50%; transform: translateY(-50%); color: #d7ad63; font-weight: 900; width: 1.4rem; height: 1.4rem; display: grid; place-items: center; border-radius: 999px; border: 1px solid rgba(215,173,99,0.45); background: rgba(215,173,99,0.08); } .ds-faq[data-open='true'] .ds-faq-summary::after { content: '-'; } .ds-faq-panel { padding: 0 1.1rem 1rem; overflow: hidden; transition: max-height 400ms cubic-bezier(0.07,0.82,0.16,1), opacity 220ms ease; } .ds-faq-panel p { color: #a7b0c0; line-height: 1.65; margin: 0; font-size: 0.97rem; }"
+    },
+    {
+      "name": "Navigation",
+      "kind": "nav",
+      "description": "Centered-logo split nav. Two links left, logo center, two links right. Logo animates on scroll.",
+      "html": "<header class=\"ds-header\"><nav class=\"ds-nav\"><a class=\"ds-nav-link\" href=\"#\">Über mich</a><a class=\"ds-nav-link\" href=\"#\">Preise</a><a class=\"ds-nav-link ds-nav-logo\" href=\"#\" aria-label=\"Zur Startseite\"><div class=\"ds-nav-logo-box\">JE</div></a><a class=\"ds-nav-link\" href=\"#\">FAQ</a><a class=\"ds-nav-link\" href=\"#\">Kontakt</a></nav></header>",
+      "css": ".ds-header { position: sticky; top: 0; z-index: 120; border-bottom: 1px solid #252c3a; backdrop-filter: blur(14px); background: rgba(11,13,18,0.8); } .ds-nav { display: flex; gap: 1.35rem; align-items: center; justify-content: center; min-height: 88px; } .ds-nav-link { color: #a7b0c0; font-size: 1.06rem; text-decoration: none; font-family: Inter, system-ui, sans-serif; transition: color 150ms ease; } .ds-nav-link:hover { color: #f5f7fa; } .ds-nav-link.active { color: #f5f7fa; } .ds-nav-logo { display: inline-flex; align-items: center; justify-content: center; margin: 0 0.25rem; } .ds-nav-logo-box { width: 60px; height: 60px; background: rgba(215,173,99,0.15); border: 1px solid rgba(215,173,99,0.4); border-radius: 8px; display: grid; place-items: center; color: #d7ad63; font-family: 'Cinzel', Georgia, serif; font-weight: 700; font-size: 1.1rem; letter-spacing: 0.1em; }"
+    },
+    {
+      "name": "Process Step Card",
+      "kind": "card",
+      "description": "Numbered step in the workflow sequence. Amber step number badge, dark background.",
+      "html": "<article class=\"ds-step\"><span class=\"ds-step-num\">01</span><h3 class=\"ds-step-title\">Kennenlerngespräch</h3><p class=\"ds-step-body\">Wir sprechen über euren Tag, eure Wünsche und den gewünschten Look.</p></article>",
+      "css": ".ds-step { border: 1px solid #2a3244; background: linear-gradient(145deg, rgba(15,20,30,0.95), rgba(12,16,25,0.9)); border-radius: 16px; padding: 1.5rem 1.1rem 1.1rem; } .ds-step-num { display: inline-flex; align-items: center; justify-content: center; width: 2rem; height: 2rem; border-radius: 999px; margin-bottom: 0.55rem; background: rgba(215,173,99,0.18); border: 1px solid rgba(215,173,99,0.55); color: #d7ad63; font-size: 0.82rem; font-weight: 800; letter-spacing: 0.04em; font-family: 'Cinzel', Georgia, serif; } .ds-step-title { font-family: 'Cinzel', Georgia, serif; font-weight: 700; font-size: 1.05rem; letter-spacing: 0.02em; color: #f5f7fa; margin: 0 0 0.5rem; } .ds-step-body { color: #a7b0c0; line-height: 1.65; margin: 0; font-size: 0.97rem; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "Amber Reel",
+    "overview": "The JE Media design system is the space before the film begins: dark, warm, expectant. Every surface is a screening room waiting for images that carry more weight than any interface element ever could. Amber Filament (#d7ad63) is not a brand accent in the conventional sense; it is atmospheric light, the glow of a projector aperture, the only warm source in a deliberately dark room.\n\nTypography carries a deliberate tension. Cinzel's Roman-carved geometry anchors headings in something timeless, while Great Vibes script eyebrows breathe warmth and human presence into the hierarchy. The body type (Inter) stays completely out of the way.\n\nThe system rejects two failure modes: the generic videographer website (harsh black, high-voltage yellow, action-hero energy) and the corporate agency surface (cold grid, transactional tone, zero human presence). Couples arriving here should feel invited, not processed.",
+    "keyCharacteristics": [
+      "Dark-first: cinema darkness as focus, never as trend",
+      "Gold as warmth, not luxury signaling; rarity is the point",
+      "Three-voice typography: Roman gravitas + calligraphy warmth + humanist clarity",
+      "Generous whitespace; the eye rests, imagery breathes",
+      "Personal singular: no 'our team', no enterprise grid, no conversion-rate urgency"
+    ],
+    "rules": [
+      { "name": "The One Source Rule", "body": "Amber Filament is the only chromatic color in the system. It earns its impact through rarity. If two things are gold on the same screen, one of them shouldn't be.", "section": "colors" },
+      { "name": "The Warm Black Rule", "body": "Never use #000 or pure #fff. Midnight Ink and Soft Projection are the absolute extremes.", "section": "colors" },
+      { "name": "The Script-Is-A-Whisper Rule", "body": "Great Vibes only appears as a pre-heading eyebrow, never as a standalone heading, never in navigation, never in body copy.", "section": "typography" },
+      { "name": "The Scale Minimum Rule", "body": "Never use fewer than three distinct weights in a section that has a heading + body structure.", "section": "typography" },
+      { "name": "The Flat-By-Default Rule", "body": "Surfaces are flat at rest. Motion on hover signals interactivity; it does not elevate the surface visually. Do not add box-shadow to cards, FAQ items, or pricing panels.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do use Amber Filament on interactive states and essential UI affordances only. Its rarity is its power.",
+      "Do pair every Cinzel headline with a Great Vibes script eyebrow when there is a section title structure.",
+      "Do give imagery breathing room. When a photo or video is present, reduce surrounding UI to its minimum.",
+      "Do use transform: translateY(-1px) as the exclusive hover motion for buttons.",
+      "Do maintain the stepped dark surfaces: Midnight Ink for base, Screening Room for lifted cards, Deep Frame for navigation chips.",
+      "Do keep all body text at Silver Grain inside cards and Soft Projection on open dark surfaces."
+    ],
+    "donts": [
+      "Don't use gradient text (background-clip: text with gradient fill). Every heading is solid color.",
+      "Don't reproduce the generic videographer website: no high-contrast yellow-on-black, no action-hero energy.",
+      "Don't add agency-feeling UI: no multi-column feature grids with icon-heading-text cards, no enterprise pricing tables.",
+      "Don't use Great Vibes in navigation, buttons, body copy, or as a standalone heading. Eyebrow-only.",
+      "Don't add glassmorphism surfaces decoratively. The only permitted blur-glass is the sticky header.",
+      "Don't add box-shadow to cards, FAQ items, or pricing panels. They are flat.",
+      "Don't use pure #000 or pure #fff."
+    ]
+  }
+}

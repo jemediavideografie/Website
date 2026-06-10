@@ -1,24 +1,53 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Über mich – Hochzeitsvideograf aus Espelkamp",
+  description:
+    "Joel aus Espelkamp – Hochzeitsvideograf mit Fokus auf emotionale, cinematische Filme. Sony A7 III, RS4 Pro Gimbal. Hochzeiten in OWL & NRW.",
+  alternates: { canonical: "https://jemedia.de/ueber-mich" },
+  openGraph: {
+    title: "Über mich – Hochzeitsvideograf aus Espelkamp | JE Media",
+    description:
+      "Joel aus Espelkamp – Hochzeitsvideograf mit Fokus auf emotionale, cinematische Filme. Sony A7 III, RS4 Pro Gimbal. Hochzeiten in OWL & NRW.",
+    url: "https://jemedia.de/ueber-mich",
+  },
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Startseite", item: "https://jemedia.de" },
+    { "@type": "ListItem", position: 2, name: "Über mich", item: "https://jemedia.de/ueber-mich" },
+  ],
+};
 
 export default function AboutPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <section className="section">
         <div className="container split">
           <div>
-            <h1>Über mich</h1>
+            <h1>Über mich – Hochzeitsvideograf Joel aus Espelkamp</h1>
             <p>
-              Ich bin Videograf mit Fokus auf emotionale Storys und cineastische Bilder. Mein Anspruch ist,
-              echte Momente so einzufangen, dass sie auch Jahre später wieder lebendig wirken.
+              Ich bin Joel, Hochzeitsvideograf aus Espelkamp im Kreis Minden-Lübbecke (NRW).
+              Mein Fokus liegt auf emotionalen Storys und cineastischen Bildern –
+              echte Momente so festgehalten, dass sie auch Jahre später noch lebendig wirken.
             </p>
             <p>
-              Ich arbeite in der Regel alleine und begleite jedes Projekt persönlich - flexibel, unauffällig
-              und mit viel Gespür für Timing und Stimmung.
+              Ich begleite Hochzeiten in der gesamten Region: OWL, Minden, Bielefeld, Herford,
+              Paderborn, Osnabrück und auf Anfrage auch darüber hinaus. Ich arbeite alleine –
+              persönlich, unauffällig und mit viel Gespür für den richtigen Moment.
             </p>
             <p>
-              Equipment: Sony A7 III, RS4 Pro Gimbal und ein flexibles 24-70mm Setup für hochwertige
-              Aufnahmen in jeder Situation.
+              Equipment: Sony A7 III, RS4 Pro Gimbal und ein flexibles 24–70 mm Setup für
+              hochwertige Aufnahmen in jeder Situation.
             </p>
             <p>
               Mein Portfolio und Content gibt es auf Instagram und TikTok:
@@ -35,7 +64,7 @@ export default function AboutPage() {
           <div>
             <Image
               src="/images/portrait.jpg"
-              alt="Videograf von JE Media"
+              alt="Joel – Hochzeitsvideograf aus Espelkamp, NRW"
               width={620}
               height={760}
               className="about-portrait"
@@ -48,20 +77,24 @@ export default function AboutPage() {
       <section className="section">
         <div className="container">
           <h2>So arbeite ich</h2>
-          <div className="card-grid two">
-            <article className="card">
+          <div className="card-grid two process-grid">
+            <article className="card process-card">
+              <span className="process-step">01</span>
               <h3>Kennenlerngespräch</h3>
               <p>Wir sprechen über euren Tag oder euer Projekt, eure Wünsche und den gewünschten Look.</p>
             </article>
-            <article className="card">
+            <article className="card process-card">
+              <span className="process-step">02</span>
               <h3>Individuelles Angebot</h3>
               <p>Auf Basis eurer Eckdaten erhaltet ihr ein unverbindliches, passendes Angebot.</p>
             </article>
-            <article className="card">
+            <article className="card process-card">
+              <span className="process-step">03</span>
               <h3>Dreharbeiten</h3>
-              <p>Authentisch, unaufdringlich und mit Zeitgefühl - damit echte Momente entstehen.</p>
+              <p>Authentisch, unaufdringlich und mit Zeitgefühl, damit echte Momente entstehen.</p>
             </article>
-            <article className="card">
+            <article className="card process-card">
+              <span className="process-step">04</span>
               <h3>Schnitt & Übergabe</h3>
               <p>Ich setze die Story filmisch um und liefere euch euer fertiges Video als Download.</p>
             </article>
@@ -73,7 +106,7 @@ export default function AboutPage() {
         <div className="container">
           <h2>Bereit für euren Film?</h2>
           <p>Schreibt mir direkt auf WhatsApp oder stellt eine Anfrage über das Kontaktformular.</p>
-          <div className="contact-actions">
+          <div className="contact-actions space-top">
             <a className="btn" href="https://wa.me/491759084870" target="_blank" rel="noreferrer">
               WhatsApp Kontakt
             </a>

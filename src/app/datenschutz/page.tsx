@@ -1,3 +1,12 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Datenschutz – JE Media",
+  description: "Datenschutzerklärung von JE Media – Joel Enrico Ediger, Hochzeitsvideograf aus Espelkamp.",
+  alternates: { canonical: "https://jemedia.de/datenschutz" },
+  robots: { index: false, follow: false },
+};
+
 export default function DatenschutzPage() {
   return (
     <section className="section">

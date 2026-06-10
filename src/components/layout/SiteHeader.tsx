@@ -6,8 +6,8 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
 const navItems = [
-  { href: "/", label: "Start" },
   { href: "/ueber-mich", label: "Über mich" },
+  { href: "/preise", label: "Preise" },
   { href: "/faq", label: "FAQ" },
   { href: "/kontakt", label: "Kontakt" },
 ];
@@ -34,7 +34,7 @@ export function SiteHeader() {
         <Link href="/" className="brand brand-mobile" aria-label="Zur Startseite">
           <Image src="/images/logoclean.png" alt="JE Media Logo" width={44} height={44} />
         </Link>
-        <nav className="main-nav">
+        <nav className="main-nav" aria-label="Hauptnavigation">
           {leftNavItems.map((item) => (
             <Link
               key={item.href}
@@ -66,12 +66,9 @@ export function SiteHeader() {
         >
           Menü
         </button>
-        <Link className="btn btn-small header-cta" href="/kontakt">
-          Anfrage stellen
-        </Link>
       </div>
       {mobileOpen && (
-        <nav className="mobile-nav container">
+        <nav className="mobile-nav container" aria-label="Mobile Navigation">
           {navItems.map((item) => (
             <Link
               key={`mobile-${item.href}`}

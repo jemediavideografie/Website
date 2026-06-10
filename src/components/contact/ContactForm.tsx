@@ -5,7 +5,7 @@ import { FormEvent, useState } from "react";
 type SubmitState = "idle" | "loading" | "success" | "error";
 
 type FieldErrors = Partial<Record<
-  "name" | "email" | "preferredContact" | "instagramHandle" | "weddingLocation" | "weddingDate" | "carLocation" | "carLocationOther" | "preferredDate" | "details",
+  "name" | "email" | "preferredContact" | "instagramHandle" | "projectType" | "weddingLocation" | "weddingDate" | "carLocation" | "carLocationOther" | "preferredDate" | "details",
   string
 >>;
 
@@ -28,6 +28,7 @@ function validateClient(data: Record<string, string>): FieldErrors {
     }
     if (!data.preferredDate) errors.preferredDate = "Bitte einen Wunschtermin angeben.";
   }
+  if (!data.projectType) errors.projectType = "Bitte eine Projektart angeben.";
   if (!data.details || data.details.trim().length < 20) errors.details = "Bitte eine aussagekräftige Nachricht eingeben (mind. 20 Zeichen).";
   return errors;
 }
@@ -39,6 +40,7 @@ export function ContactForm() {
   const [projectType, setProjectType] = useState("");
   const [carLocation, setCarLocation] = useState("");
   const [instagramHandle, setInstagramHandle] = useState("");
+  const [foundThrough, setFoundThrough] = useState("");
   const [fieldErrors, setFieldErrors] = useState<FieldErrors>({});
   const [formStartedAt] = useState(() => Date.now());
 
@@ -80,6 +82,7 @@ export function ContactForm() {
       "Grober Ort (Automotive)": data.carLocation ?? "",
       "Andere Region (Automotive)": data.carLocationOther ?? "",
       "Wunschtermin (Automotive)": data.preferredDate ?? "",
+      "Wie gefunden": data.foundThrough ?? "",
       message: data.details ?? "",
       botcheck: data.website ?? "",
     };
@@ -104,6 +107,7 @@ export function ContactForm() {
       setProjectType("");
       setCarLocation("");
       setInstagramHandle("");
+      setFoundThrough("");
       return;
     } catch (error) {
       setSubmitState("error");
@@ -122,6 +126,7 @@ export function ContactForm() {
             type="text"
             required
             minLength={2}
+            maxLength={100}
             placeholder="Max Mustermann"
             aria-describedby={fieldErrors.name ? "err-name" : undefined}
             aria-invalid={!!fieldErrors.name}
@@ -134,6 +139,7 @@ export function ContactForm() {
             name="email"
             type="email"
             required
+            maxLength={254}
             placeholder="name@beispiel.de"
             aria-describedby={fieldErrors.email ? "err-email" : undefined}
             aria-invalid={!!fieldErrors.email}
@@ -142,7 +148,7 @@ export function ContactForm() {
         </label>
         <label>
           Telefon (optional)
-          <input name="phone" type="tel" placeholder="+49 ..." />
+          <input name="phone" type="tel" maxLength={25} placeholder="+49 ..." />
         </label>
         <label>
           Bevorzugter Kontaktweg *
@@ -189,6 +195,8 @@ export function ContactForm() {
               setProjectType(event.target.value);
               setCarLocation("");
             }}
+            aria-describedby={fieldErrors.projectType ? "err-projectType" : undefined}
+            aria-invalid={!!fieldErrors.projectType}
           >
             <option value="" disabled>
               Bitte wählen
@@ -197,6 +205,7 @@ export function ContactForm() {
             <option value="Automotive">Automotive</option>
             <option value="Sonstiges">Sonstiges</option>
           </select>
+          {fieldErrors.projectType && <span id="err-projectType" className="field-error">{fieldErrors.projectType}</span>}
         </label>
       </div>
 
@@ -208,6 +217,7 @@ export function ContactForm() {
               name="weddingLocation"
               type="text"
               required
+              maxLength={150}
               placeholder="Ort / Location"
               aria-describedby={fieldErrors.weddingLocation ? "err-weddingLocation" : undefined}
               aria-invalid={!!fieldErrors.weddingLocation}
@@ -285,11 +295,29 @@ export function ContactForm() {
       )}
 
       <label>
+        Wie habt ihr mich gefunden? (optional)
+        <select
+          name="foundThrough"
+          value={foundThrough}
+          onChange={(event) => setFoundThrough(event.target.value)}
+        >
+          <option value="">Bitte wählen</option>
+          <option value="Google">Google</option>
+          <option value="Instagram">Instagram</option>
+          <option value="TikTok">TikTok</option>
+          <option value="Empfehlung">Empfehlung</option>
+          <option value="Hochzeitsmesse">Hochzeitsmesse</option>
+          <option value="Sonstiges">Sonstiges</option>
+        </select>
+      </label>
+
+      <label>
         Nachricht *
         <textarea
           name="details"
           required
           minLength={20}
+          maxLength={3000}
           rows={6}
           placeholder="Erzähle kurz von deinem Vorhaben, Termin und Wünschen ..."
           aria-describedby={fieldErrors.details ? "err-details" : undefined}
@@ -308,7 +336,13 @@ export function ContactForm() {
       </button>
 
       {message && (
-        <p className={`form-message ${submitState === "success" ? "success" : "error"}`}>{message}</p>
+        <p
+          role="alert"
+          aria-live="assertive"
+          className={`form-message ${submitState === "success" ? "success" : "error"}`}
+        >
+          {message}
+        </p>
       )}
     </form>
   );

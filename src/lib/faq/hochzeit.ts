@@ -4,7 +4,7 @@ export const hochzeit: FaqItem[] = [
   {
     question: "Wie läuft die Buchung ab?",
     answer:
-      "Nachdem eure Anfrage über das Kontaktformular eingegangen ist, vereinbaren wir ein unverbindliches Kennenlerngespräch (online). Wir sprechen über euren Hochzeitstag, eure Wünsche und den Ablauf. Danach erhaltet ihr ein individuelles Angebot.",
+      "Alles fängt mit eurer Buchungsanfrage an. Falls euer Tag noch in meinem Kalender frei ist, reserviere ich ihn für euch und wir setzen uns via Skype oder Telefon zusammen und sprechen alles durch. Gerne können wir uns dann bei einem Kaffee persönlich kennenlernen und alles auf's Papier bringen.",
   },
   {
     question: "Welche Momente werden gefilmt?",
@@ -59,5 +59,25 @@ export const hochzeit: FaqItem[] = [
     question: "Ist eine Anzahlung erforderlich?",
     answer:
       "Ja. Zur festen Reservierung eures Termins ist eine Anzahlung erforderlich. Hierzu erhaltet ihr eine Anzahlungsrechnung. Erst nach Zahlungseingang gilt euer Termin als verbindlich gebucht.",
+  },
+  {
+    question: "Wie lange dauert es, bis der Film fertig ist?",
+    answer:
+      "Ich verstehe gut, dass ihr es kaum erwarten könnt, euren Film Familie und Freunden zu zeigen! Ich rechne meistens mit einer Bearbeitungszeit von 6–8 Wochen und dann noch zwei weiteren Wochen für eventuelle Korrekturen. In Einzelfällen kann es ein wenig länger dauern.",
+  },
+  {
+    question: "Wie funktioniert das mit den Änderungen?",
+    answer:
+      "Sobald ich mit der Nachbereitung eures Films fertig bin, erhaltet ihr einen Link, unter dem ihr den Film anschauen könnt. Ihr könnt euch dann etwas Zeit nehmen und mir eure Änderungswünsche gesammelt zuschicken. Ich bearbeite diese dann und schicke euch eine neue Version des Films zu.",
+  },
+  {
+    question: "Wie steht's mit der Verpflegung?",
+    answer:
+      "Macht euch um mich keine Sorgen – aber zu einer Einladung ans Buffet oder was auch immer euch vorschwebt, würde ich keinesfalls nein sagen 😊 Platziert mich, wo ihr wollt – ein kleiner Plausch mit euren Gästen ist mir jederzeit eine Freude!",
+  },
+  {
+    question: "Bietest du eine Absicherung bei unvorhergesehenen Ereignissen an?",
+    answer:
+      "Klar – sollte euer Tag durch unvorhersehbare Einschränkungen nicht stattfinden können, versuchen wir gemeinsam eine Lösung zu finden. Sprecht mich gerne darauf an!",
   },
 ];

@@ -1,88 +1,240 @@
-import { HeroVideoCompare } from "@/components/HeroVideoCompare";
+import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
+import { FooterCtaVideo } from "@/components/home/FooterCtaVideo";
+import { TestimonialsCarousel } from "@/components/home/TestimonialsCarousel";
+
+export const metadata: Metadata = {
+  title: "Hochzeitsvideograf Espelkamp & OWL – Emotionale Filme",
+  description:
+    "JE Media – Dein Hochzeitsvideograf aus Espelkamp. Cinematische Hochzeitsfilme in 4K für Paare in OWL, Minden, Bielefeld und NRW. Jetzt Termin anfragen.",
+  alternates: { canonical: "https://jemedia.de" },
+  openGraph: {
+    title: "Hochzeitsvideograf Espelkamp & OWL – Emotionale Hochzeitsfilme",
+    description:
+      "JE Media – Dein Hochzeitsvideograf aus Espelkamp. Cinematische Hochzeitsfilme in 4K für Paare in OWL, Minden, Bielefeld und NRW.",
+    url: "https://jemedia.de",
+  },
+};
+
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://jemedia.de/#website",
+  name: "JE Media",
+  url: "https://jemedia.de",
+  publisher: { "@id": "https://jemedia.de/#business" },
+};
+
+const testimonials = [
+  {
+    quote:
+      "Joel hat es geschafft, unseren Hochzeitstag emotional und authentisch festzuhalten. Trotz kleiner Zeitprobleme zwischendurch blieb er jederzeit ruhig, professionell und organisiert – sodass wir uns komplett auf den Moment konzentrieren konnten.",
+    name: "Alex & Julia",
+    date: "Hochzeit Dezember 2024",
+  },
+  {
+    quote:
+      "Unglaublich, echt Hammer geworden – vielen vielen Dank! Das hat unsere Erwartungen komplett übertroffen.",
+    name: "Luis & Melina",
+    date: "Hochzeit September 2024",
+  },
+  {
+    quote:
+      "Wir sind so glücklich mit dem Video. Joel hat unseren Tag wunderschön eingefangen – wir finden seine Arbeit einfach großartig.",
+    name: "Jonas & Jasmin",
+    date: "Hochzeit August 2025",
+  },
+];
 
 export default function HomePage() {
   return (
     <>
-      <section className="hero">
-        <HeroVideoCompare
-          leftVideoSrc="/videos/Hochzeit.mp4"
-          rightVideoSrc="/videos/automotive.mp4"
-          leftLabel="Hochzeit"
-          rightLabel="Automotive"
-        />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+      />
+      {/* HERO */}
+      <section className="hero hero-wedding">
+        <video
+          className="hero-video-bg"
+          autoPlay
+          muted
+          loop
+          playsInline
+          aria-hidden="true"
+        >
+          <source src="/videos/Hochzeit.mp4" type="video/mp4" />
+        </video>
         <div className="hero-overlay" aria-hidden="true" />
         <div className="container hero-content">
-          <p className="eyebrow">JE Media</p>
-          <h1>Emotionale Filme für Hochzeit und Automotive</h1>
+          <span className="eyebrow-script">JE Media</span>
+          <h1>Emotionale Filme<br />für deine Hochzeit</h1>
           <p>
-            Bewegte Bilder, echte Emotionen und ein moderner, cinematischer Look für Erinnerungen, die
-            bleiben.
+            Cinematischer Hochzeitsvideograf aus Espelkamp –
+            für Paare in OWL, Minden, Bielefeld und ganz NRW.
+            Echte Emotionen, bewegende Bilder, für immer festgehalten.
           </p>
-        </div>
-      </section>
-
-      <section className="section home-services">
-        <div className="container">
-          <h2>Leistungen</h2>
-          <div className="card-grid two services-grid">
-            <article className="card service-card">
-              <h3>Hochzeitsvideografie</h3>
-              <p>
-                Authentische Begleitung eures Tages - vom First Look bis zur Feier - in einem emotionalen
-                Highlightfilm.
-              </p>
-            </article>
-            <article className="card service-card">
-              <h3>Automotive Videos</h3>
-              <p>
-                Dynamische und detailreiche Aufnahmen für Autos und Motorräder mit Fokus auf Stil und
-                Charakter.
-              </p>
-            </article>
+          <div className="hero-actions">
+            <Link className="btn" href="/kontakt">
+              Anfrage stellen
+            </Link>
+            <Link className="btn btn-ghost" href="/preise">
+              Pakete & Preise
+            </Link>
           </div>
         </div>
       </section>
 
+      {/* ÜBER MICH */}
+      <section className="section home-about">
+        <div className="container split">
+          <div>
+            <span className="eyebrow-script">Wer bin ich?</span>
+            <h2>Über mich</h2>
+            <p>
+              Ich bin Joel, Hochzeitsvideograf aus Espelkamp in Nordrhein-Westfalen.
+              Mein Fokus liegt auf emotionalen Storys und cineastischen Bildern –
+              echte Momente so festgehalten, dass sie auch Jahre später noch lebendig wirken.
+            </p>
+            <p>
+              Ich begleite Hochzeiten in OWL, im Kreis Minden-Lübbecke, in Bielefeld,
+              Paderborn und der gesamten Region – persönlich, flexibel und unauffällig.
+            </p>
+            <p>
+              Equipment: Sony A7 III, RS4 Pro Gimbal und ein flexibles
+              24–70 mm Setup für hochwertige Aufnahmen in jeder Situation.
+            </p>
+            <div className="contact-actions space-top">
+              <Link className="btn btn-ghost" href="/ueber-mich">
+                Mehr über mich
+              </Link>
+            </div>
+          </div>
+          <div>
+            <Image
+              src="/images/portrait.jpg"
+              alt="Joel – Videograf von JE Media"
+              width={620}
+              height={760}
+              className="about-portrait"
+              style={{ width: "100%", height: "auto" }}
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* SO ARBEITE ICH */}
       <section className="section home-process">
         <div className="container">
+          <span className="eyebrow-script">Mein Ablauf</span>
           <h2>So arbeite ich</h2>
           <div className="card-grid two process-grid">
             <article className="card process-card">
               <span className="process-step">01</span>
               <h3>Kennenlerngespräch</h3>
-              <p>Wir sprechen über euren Tag oder euer Projekt, eure Wünsche und den gewünschten Look.</p>
+              <p>Wir sprechen über euren Tag, eure Wünsche und den gewünschten Look – persönlich, per Telefon oder Skype.</p>
             </article>
             <article className="card process-card">
               <span className="process-step">02</span>
               <h3>Individuelles Angebot</h3>
-              <p>Auf Basis eurer Eckdaten erhaltet ihr ein unverbindliches, passendes Angebot.</p>
+              <p>Auf Basis eurer Eckdaten erhaltet ihr ein unverbindliches, auf euch zugeschnittenes Angebot.</p>
             </article>
             <article className="card process-card">
               <span className="process-step">03</span>
               <h3>Dreharbeiten</h3>
-              <p>Authentisch, unaufdringlich und mit Zeitgefühl - damit echte Momente entstehen.</p>
+              <p>Authentisch, unaufdringlich und mit Zeitgefühl – damit echte Momente entstehen können.</p>
             </article>
             <article className="card process-card">
               <span className="process-step">04</span>
               <h3>Schnitt & Übergabe</h3>
-              <p>Ich setze die Story filmisch um und liefere euch euer fertiges Video als Download.</p>
+              <p>Ich setze eure Geschichte filmisch um und liefere euren fertigen Film als Download in 4K.</p>
             </article>
           </div>
         </div>
       </section>
 
-      <section className="section contact-strip">
+      {/* SHOWREEL */}
+      <section className="section home-showreel">
         <div className="container">
-          <h2>Bereit für euren Film?</h2>
-          <p>Schreibt mir direkt auf WhatsApp oder stellt eine Anfrage über das Kontaktformular.</p>
-          <div className="contact-actions">
-            <a className="btn" href="https://wa.me/491759084870" target="_blank" rel="noreferrer">
-              WhatsApp Kontakt
+          <span className="eyebrow-script">Meine Arbeit</span>
+          <h2>Showreel</h2>
+          <div className="showreel-box">
+            <svg
+              className="showreel-f-svg"
+              viewBox="0 0 100 160"
+              fill="none"
+              aria-hidden="true"
+            >
+              <line
+                x1="38" y1="18" x2="38" y2="142"
+                stroke="var(--accent)"
+                strokeWidth="3.5"
+                strokeLinecap="round"
+                className="draw-vert"
+              />
+              <line
+                x1="38" y1="18" x2="82" y2="18"
+                stroke="var(--accent)"
+                strokeWidth="3.5"
+                strokeLinecap="round"
+                className="draw-top"
+              />
+              <line
+                x1="38" y1="76" x2="70" y2="76"
+                stroke="var(--accent)"
+                strokeWidth="3.5"
+                strokeLinecap="round"
+                className="draw-mid"
+              />
+            </svg>
+            <p className="showreel-coming-text" lang="en">Coming Soon</p>
+          </div>
+        </div>
+      </section>
+
+      {/* TESTIMONIALS */}
+      <section className="section home-testimonials">
+        <div className="container">
+          <span className="eyebrow-script">Was Paare sagen</span>
+          <h2>Stimmen</h2>
+          <p className="muted" style={{ marginBottom: "2rem", maxWidth: "600px" }}>
+            Echte Worte von Paaren, die ihren besonderen Tag mit mir geteilt haben.
+          </p>
+          <TestimonialsCarousel items={testimonials} />
+          <div className="contact-actions" style={{ marginTop: "2rem" }}>
+            <a
+              className="btn btn-ghost"
+              href="https://g.page/r/CSU91lap3ZMwEAE/review"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Bewertung auf Google schreiben
             </a>
-            <Link className="btn btn-ghost" href="/kontakt">
+          </div>
+        </div>
+      </section>
+
+      {/* FOOTER CTA */}
+      <section className="footer-cta" aria-label="Anfrage stellen">
+        <FooterCtaVideo />
+        <div className="footer-cta-overlay" aria-hidden="true" />
+        <div className="container footer-cta-content">
+          <span className="eyebrow-script">Euer großer Tag</span>
+          <h2>Bereit für euren Film?</h2>
+          <p>Schreibt mir – ich freue mich darauf, eure Geschichte zu erzählen.</p>
+          <div className="footer-cta-actions">
+            <Link className="btn" href="/kontakt">
               Anfrage stellen
             </Link>
+            <a
+              className="btn btn-ghost"
+              href="https://wa.me/491759084870"
+              target="_blank"
+              rel="noreferrer"
+            >
+              WhatsApp
+            </a>
           </div>
         </div>
       </section>

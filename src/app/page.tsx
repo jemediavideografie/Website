@@ -37,7 +37,7 @@ const testimonials = [
     quote:
       "Unglaublich, echt Hammer geworden – vielen vielen Dank! Das hat unsere Erwartungen komplett übertroffen.",
     name: "Luis & Melina",
-    date: "Hochzeit September 2024",
+    date: "Hochzeit September 2023",
   },
   {
     quote:

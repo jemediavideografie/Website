@@ -1,0 +1,11 @@
+Options -Indexes
+RewriteEngine On
+
+# Existierende Dateien und Verzeichnisse direkt ausliefern
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# /impressum → /impressum.html (gilt für alle Routen)
+RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI}.html -f
+RewriteRule ^(.+?)/?$ /$1.html [L]

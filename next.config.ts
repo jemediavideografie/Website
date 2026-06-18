@@ -2,6 +2,7 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   output: 'export',
+  trailingSlash: true,
   images: {
     formats: ["image/avif", "image/webp"],
     unoptimized: true, // ← wichtig! Next.js Image Optimization läuft nicht auf static hosting

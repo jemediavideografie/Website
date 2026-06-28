@@ -37,9 +37,13 @@ export default function AboutPage() {
             <h1>Über mich – Hochzeitsvideograf Joel aus Espelkamp</h1>
             <p>
               Ich bin Joel, Hochzeitsvideograf aus Espelkamp im Kreis Minden-Lübbecke (NRW).
+             </p>
+            <p>
               Was mich antreibt? 
               Die Momente, die man nicht stellen kann. Der Blick, wenn jemand seinen Partner zum ersten Mal am Altar sieht. 
               Das Lachen beim ersten Tanz. Diese Sekunden festzuhalten, das ist mein Handwerk. 
+            </p>
+            <p>
               Ich bin überzeugt, dass ein gutes Hochzeitsvideo kein Luxus sein sollte. Jedes Paar verdient einen Film, der ehrlich und emotional erzählt, was an diesem Tag wirklich passiert ist.
               Ich begleite euch von der Getting-Ready-Phase bis weit in den Abend und sorge dafür, dass ihr später genau das seht, was ihr gefühlt habt.
             </p>

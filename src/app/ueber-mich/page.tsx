@@ -44,7 +44,7 @@ export default function AboutPage() {
               Ich begleite euch von der Getting-Ready-Phase bis weit in den Abend und sorge dafür, dass ihr später genau das seht, was ihr gefühlt habt.
             </p>
             <p>
-              Ich begleite Hochzeiten in der gesamten Region: NRW & Niedersachenund auf Anfrage auch darüber hinaus.
+              Ich begleite Hochzeiten in der gesamten Region: NRW & Niedersachen und auf Anfrage auch darüber hinaus.
               Ich arbeite alleine – persönlich, unauffällig und mit viel Gespür für den richtigen Moment.
             </p>
             <p>

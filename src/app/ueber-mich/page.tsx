@@ -37,17 +37,15 @@ export default function AboutPage() {
             <h1>Über mich – Hochzeitsvideograf Joel aus Espelkamp</h1>
             <p>
               Ich bin Joel, Hochzeitsvideograf aus Espelkamp im Kreis Minden-Lübbecke (NRW).
-              Mein Fokus liegt auf emotionalen Storys und cineastischen Bildern –
-              echte Momente so festgehalten, dass sie auch Jahre später noch lebendig wirken.
+              Was mich antreibt? 
+              Die Momente, die man nicht stellen kann. Der Blick, wenn jemand seinen Partner zum ersten Mal am Altar sieht. 
+              Das Lachen beim ersten Tanz. Diese Sekunden festzuhalten, das ist mein Handwerk. 
+              Ich bin überzeugt, dass ein gutes Hochzeitsvideo kein Luxus sein sollte. Jedes Paar verdient einen Film, der ehrlich und emotional erzählt, was an diesem Tag wirklich passiert ist.
+              Ich begleite euch von der Getting-Ready-Phase bis weit in den Abend und sorge dafür, dass ihr später genau das seht, was ihr gefühlt habt.
             </p>
             <p>
-              Ich begleite Hochzeiten in der gesamten Region: OWL, Minden, Bielefeld, Herford,
-              Paderborn, Osnabrück und auf Anfrage auch darüber hinaus. Ich arbeite alleine –
-              persönlich, unauffällig und mit viel Gespür für den richtigen Moment.
-            </p>
-            <p>
-              Equipment: Sony A7 III, RS4 Pro Gimbal und ein flexibles 24–70 mm Setup für
-              hochwertige Aufnahmen in jeder Situation.
+              Ich begleite Hochzeiten in der gesamten Region: NRW & Niedersachenund auf Anfrage auch darüber hinaus.
+              Ich arbeite alleine – persönlich, unauffällig und mit viel Gespür für den richtigen Moment.
             </p>
             <p>
               Mein Portfolio und Content gibt es auf Instagram und TikTok:
@@ -80,8 +78,11 @@ export default function AboutPage() {
           <div className="card-grid two process-grid">
             <article className="card process-card">
               <span className="process-step">01</span>
-              <h3>Kennenlerngespräch</h3>
-              <p>Wir sprechen über euren Tag oder euer Projekt, eure Wünsche und den gewünschten Look.</p>
+              <h3>Kostenloses Kennenlerngespräch</h3>
+              <p>Bevor ihr euch entscheidet, wollen wir erst wissen, ob es zwischen uns passt.
+                In einem kurzen Gespräch erzähle ich euch, wie ich arbeite, und ihr erzählt mir, was euch wichtig ist.
+                Kein Druck, keine Verpflichtung.
+                Wir sprechen über euren Tag oder euer Projekt, eure Wünsche und den gewünschten Look.</p>
             </article>
             <article className="card process-card">
               <span className="process-step">02</span>
@@ -111,7 +112,7 @@ export default function AboutPage() {
               WhatsApp Kontakt
             </a>
             <Link className="btn btn-ghost" href="/kontakt">
-              Anfrage stellen
+              Kennlerngespräch buchen
             </Link>
           </div>
         </div>

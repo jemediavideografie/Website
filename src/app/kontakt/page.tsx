@@ -34,7 +34,7 @@ export default function ContactPage() {
       <div className="container narrow">
         <h1>Hochzeitsvideo anfragen – JE Media Espelkamp</h1>
         <p>
-          Habt ihr Interesse, Fragen oder möchtet ein Kennlerngespräch buchen? Schreibt mir einfach eure Eckdaten und ich melde mich innerhalb
+          Habt ihr Interesse, Fragen oder möchtet ein Kennlerngespräch buchen? Schreibt mir einfach eure Eckdaten ganz einfach via Kontaktformular oder Whatsapp und ich melde mich innerhalb
           von 24–48 Stunden bei euch.
         </p>
         <ContactForm />

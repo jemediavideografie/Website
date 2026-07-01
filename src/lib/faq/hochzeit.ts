@@ -2,9 +2,14 @@ import type { FaqItem } from "../content";
 
 export const hochzeit: FaqItem[] = [
   {
+    question: "Wie kammst du zur Hochzeitsvidegrafie?",
+    answer:
+      "Ich wurde angefragt die Hochzeit einer befreundeten Familie zu filmen. Ich war mit der Kamera dabei, eher aus Ahnung wie eine Kamera benutze als aus Plan. Doch als ich das fertige Video zum ersten Mal abspielte und ich, die Reaktion des Brautpaares bekam wusste ich sofort: Das will ich machen. Nicht als großes Business. Als Handwerk, das etwas hinterlässt.",
+  },
+  {
     question: "Wie läuft die Buchung ab?",
     answer:
-      "Alles fängt mit eurer Buchungsanfrage an. Falls euer Tag noch in meinem Kalender frei ist, reserviere ich ihn für euch und wir setzen uns via Skype oder Telefon zusammen und sprechen alles durch. Gerne können wir uns dann bei einem Kaffee persönlich kennenlernen und alles auf's Papier bringen.",
+      "Alles fängt mit eurer Buchungsanfrage an. Falls euer Tag noch in meinem Kalender frei ist, setzen wir uns via Skype oder Telefon zusammen und sprechen alles durch.",
   },
   {
     question: "Welche Momente werden gefilmt?",

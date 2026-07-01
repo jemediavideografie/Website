@@ -98,12 +98,8 @@ export default function HomePage() {
               echte Momente so festgehalten, dass sie auch Jahre später noch lebendig wirken.
             </p>
             <p>
-              Ich begleite Hochzeiten in OWL, im Kreis Minden-Lübbecke, in Bielefeld,
-              Paderborn und der gesamten Region – persönlich, flexibel und unauffällig.
-            </p>
-            <p>
-              Equipment: Sony A7 III, RS4 Pro Gimbal und ein flexibles
-              24–70 mm Setup für hochwertige Aufnahmen in jeder Situation.
+              Ich begleite Hochzeiten in der gesamten Region: NRW & Niedersachen und auf Anfrage auch darüber hinaus.
+              Ich arbeite alleine – persönlich, unauffällig und mit viel Gespür für den richtigen Moment
             </p>
             <div className="contact-actions space-top">
               <Link className="btn btn-ghost" href="/ueber-mich">
@@ -132,7 +128,7 @@ export default function HomePage() {
           <div className="card-grid two process-grid">
             <article className="card process-card">
               <span className="process-step">01</span>
-              <h3>Kennenlerngespräch</h3>
+              <h3>Kostenloses Kennenlerngespräch</h3>
               <p>Wir sprechen über euren Tag, eure Wünsche und den gewünschten Look – persönlich, per Telefon oder Skype.</p>
             </article>
             <article className="card process-card">
@@ -225,7 +221,7 @@ export default function HomePage() {
           <p>Schreibt mir – ich freue mich darauf, eure Geschichte zu erzählen.</p>
           <div className="footer-cta-actions">
             <Link className="btn" href="/kontakt">
-              Anfrage stellen
+              Kennlerngespräch buchen
             </Link>
             <a
               className="btn btn-ghost"

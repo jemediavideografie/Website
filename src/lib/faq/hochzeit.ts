@@ -2,7 +2,7 @@ import type { FaqItem } from "../content";
 
 export const hochzeit: FaqItem[] = [
   {
-    question: "Wie kamst du zur Hochzeitsvidegrafie?",
+    question: "Wie bist du zur Hochzeitsvidegrafie gekommen?",
     answer:
       "Ich wurde angefragt die Hochzeit einer befreundeten Familie zu filmen. Ich war mit der Kamera dabei, eher aus Ahnung wie eine Kamera benutze als aus Plan. Doch als ich das fertige Video zum ersten Mal abspielte und ich, die Reaktion des Brautpaares bekam wusste ich sofort: Das will ich machen. Nicht als großes Business. Als Handwerk, das etwas hinterlässt.",
   },

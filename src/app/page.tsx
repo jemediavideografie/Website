@@ -7,12 +7,12 @@ import { TestimonialsCarousel } from "@/components/home/TestimonialsCarousel";
 export const metadata: Metadata = {
   title: "Hochzeitsvideograf Espelkamp & OWL – Emotionale Filme",
   description:
-    "JE Media – Dein Hochzeitsvideograf aus Espelkamp. Emotionale Hochzeitsfilme in 4K für Paare in OWL, Minden, Bielefeld und NRW. Jetzt Termin anfragen.",
+    "JE Media – Dein Hochzeitsvideograf aus Espelkamp. Hochzeitsfilme in 4K für Paare in OWL, Minden, Bielefeld und NRW. Jetzt Termin anfragen.",
   alternates: { canonical: "https://jemedia.de" },
   openGraph: {
     title: "Hochzeitsvideograf Espelkamp & OWL – Emotionale Hochzeitsfilme",
     description:
-      "JE Media – Dein Hochzeitsvideograf aus Espelkamp. Emotionale Hochzeitsfilme in 4K für Paare in OWL, Minden, Bielefeld und NRW.",
+      "JE Media – Dein Hochzeitsvideograf aus Espelkamp. Hochzeitsfilme in 4K für Paare in OWL, Minden, Bielefeld und NRW.",
     url: "https://jemedia.de",
   },
 };
@@ -71,7 +71,7 @@ export default function HomePage() {
           <span className="eyebrow-script">JE Media</span>
           <h1>Emotionale Filme<br />für deine Hochzeit</h1>
           <p>
-            Persönlicher Hochzeitsvideograf aus Espelkamp –
+            Hochzeitsvideograf aus Espelkamp –
             für Paare in OWL, Minden, Bielefeld und ganz NRW.
             Echte Emotionen, bewegende Bilder, für immer festgehalten.
           </p>
@@ -129,22 +129,22 @@ export default function HomePage() {
             <article className="card process-card">
               <span className="process-step">01</span>
               <h3>Kostenloses Kennenlerngespräch</h3>
-              <p>Wir sprechen über euren Tag, eure Wünsche und den gewünschten Look – persönlich, per Telefon oder Skype.</p>
+              <p>In einem unverbindlichen Kennenlerngespräch lernen wir uns kennen. Wir sprechen über euren Hochzeitstag, eure Wünsche und euren Stil – ganz ohne Druck oder Verpflichtung.</p>
             </article>
             <article className="card process-card">
               <span className="process-step">02</span>
               <h3>Individuelles Angebot</h3>
-              <p>Auf Basis eurer Eckdaten erhaltet ihr ein unverbindliches, auf euch zugeschnittenes Angebot.</p>
+              <p>Auf Basis eurer Wünsche und des gewünschten Leistungsumfangs erhaltet ihr ein transparentes und unverbindliches Angebot.</p>
             </article>
             <article className="card process-card">
               <span className="process-step">03</span>
               <h3>Dreharbeiten</h3>
-              <p>Authentisch, unaufdringlich und mit Zeitgefühl – damit echte Momente entstehen können.</p>
+              <p>Am Hochzeitstag begleite ich euch unauffällig und halte echte Emotionen und besondere Momente authentisch fest.</p>
             </article>
             <article className="card process-card">
               <span className="process-step">04</span>
               <h3>Schnitt & Übergabe</h3>
-              <p>Ich setze eure Geschichte filmisch um und liefere euren fertigen Film als Download in 4K.</p>
+              <p>Ich verwandle eure Erinnerungen in einen emotionalen Hochzeitsfilm und stelle euch das fertige Video bequem als Download zur Verfügung.</p>
             </article>
           </div>
         </div>

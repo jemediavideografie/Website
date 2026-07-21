@@ -40,6 +40,7 @@ export default function AboutPage() {
              </p>
             <p>
               Was mich antreibt? 
+              
               Die Momente, die man nicht stellen kann. Der Blick, wenn jemand seinen Partner zum ersten Mal am Altar sieht. 
               Das Lachen beim ersten Tanz. Diese Sekunden festzuhalten, das ist mein Handwerk. 
             </p>
@@ -83,25 +84,22 @@ export default function AboutPage() {
             <article className="card process-card">
               <span className="process-step">01</span>
               <h3>Kostenloses Kennenlerngespräch</h3>
-              <p>Bevor ihr euch entscheidet, wollen wir erst wissen, ob es zwischen uns passt.
-                In einem kurzen Gespräch erzähle ich euch, wie ich arbeite, und ihr erzählt mir, was euch wichtig ist.
-                Kein Druck, keine Verpflichtung.
-                Wir sprechen über euren Tag oder euer Projekt, eure Wünsche und den gewünschten Look.</p>
+              <p>In einem unverbindlichen Kennenlerngespräch lernen wir uns per Videocall kennen. Wir sprechen über euren Hochzeitstag, eure Wünsche und euren Stil – ganz ohne Druck oder Verpflichtung.</p>
             </article>
             <article className="card process-card">
               <span className="process-step">02</span>
               <h3>Individuelles Angebot</h3>
-              <p>Auf Basis eurer Eckdaten erhaltet ihr ein unverbindliches, passendes Angebot.</p>
+              <p>Auf Basis eurer Wünsche und des gewünschten Leistungsumfangs erhaltet ihr ein transparentes und unverbindliches Angebot.</p>
             </article>
             <article className="card process-card">
               <span className="process-step">03</span>
               <h3>Dreharbeiten</h3>
-              <p>Authentisch, unaufdringlich und mit Zeitgefühl, damit echte Momente entstehen.</p>
+              <p>Am Hochzeitstag begleite ich euch unauffällig und halte echte Emotionen und besondere Momente authentisch fest.</p>
             </article>
             <article className="card process-card">
               <span className="process-step">04</span>
               <h3>Schnitt & Übergabe</h3>
-              <p>Ich setze die Story filmisch um und liefere euch euer fertiges Video als Download.</p>
+              <p>Ich verwandle eure Erinnerungen in einen emotionalen Hochzeitsfilm und stelle euch das fertige Video bequem als Download zur Verfügung.</p>
             </article>
           </div>
         </div>

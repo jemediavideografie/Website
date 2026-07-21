@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     "Hochzeitsvideo NRW",
     "Videograf Hochzeit Minden",
     "Hochzeitsfilm Bielefeld",
-    "emotionale Hochzeitsvideografie",
+    "Hochzeitsvideografie",
     "Hochzeitsvideograf Ostwestfalen",
     "JE Media",
   ],
@@ -94,7 +94,7 @@ const personSchema = {
     "https://www.instagram.com/_je.media_/",
     "https://www.tiktok.com/@_je.media_",
   ],
-  knowsAbout: ["Hochzeitsvideografie", "Cinematografie", "Videobearbeitung", "Sony A7 III"],
+  knowsAbout: ["Hochzeitsvideografie", "Videobearbeitung", "Sony A7 III"],
 };
 
 const localBusinessSchema = {

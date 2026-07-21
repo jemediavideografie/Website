@@ -129,7 +129,7 @@ export default function HomePage() {
             <article className="card process-card">
               <span className="process-step">01</span>
               <h3>Kostenloses Kennenlerngespräch</h3>
-              <p>Wir sprechen über euren Tag, eure Wünsche und den gewünschten Look – persönlich, per Telefon oder Skype.</p>
+              <p>Bevor ihr euch entscheidet, wollen wir erst wissen, ob es zwischen uns passt. In einem kurzen Gespräch erzähle ich euch, wie ich arbeite, und ihr erzählt mir, was euch wichtig ist. Kein Druck, keine Verpflichtung. Wir sprechen über euren Tag oder euer Projekt, eure Wünsche und den gewünschten Look.</p>
             </article>
             <article className="card process-card">
               <span className="process-step">02</span>

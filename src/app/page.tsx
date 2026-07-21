@@ -7,12 +7,12 @@ import { TestimonialsCarousel } from "@/components/home/TestimonialsCarousel";
 export const metadata: Metadata = {
   title: "Hochzeitsvideograf Espelkamp & OWL – Emotionale Filme",
   description:
-    "JE Media – Dein Hochzeitsvideograf aus Espelkamp. Cinematische Hochzeitsfilme in 4K für Paare in OWL, Minden, Bielefeld und NRW. Jetzt Termin anfragen.",
+    "JE Media – Dein Hochzeitsvideograf aus Espelkamp. Emotionale Hochzeitsfilme in 4K für Paare in OWL, Minden, Bielefeld und NRW. Jetzt Termin anfragen.",
   alternates: { canonical: "https://jemedia.de" },
   openGraph: {
     title: "Hochzeitsvideograf Espelkamp & OWL – Emotionale Hochzeitsfilme",
     description:
-      "JE Media – Dein Hochzeitsvideograf aus Espelkamp. Cinematische Hochzeitsfilme in 4K für Paare in OWL, Minden, Bielefeld und NRW.",
+      "JE Media – Dein Hochzeitsvideograf aus Espelkamp. Emotionale Hochzeitsfilme in 4K für Paare in OWL, Minden, Bielefeld und NRW.",
     url: "https://jemedia.de",
   },
 };
@@ -71,7 +71,7 @@ export default function HomePage() {
           <span className="eyebrow-script">JE Media</span>
           <h1>Emotionale Filme<br />für deine Hochzeit</h1>
           <p>
-            Cinematischer Hochzeitsvideograf aus Espelkamp –
+            Persönlicher Hochzeitsvideograf aus Espelkamp –
             für Paare in OWL, Minden, Bielefeld und ganz NRW.
             Echte Emotionen, bewegende Bilder, für immer festgehalten.
           </p>

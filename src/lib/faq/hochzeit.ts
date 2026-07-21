@@ -29,7 +29,7 @@ export const hochzeit: FaqItem[] = [
   {
     question: "Wie lang ist das fertige Hochzeitsvideo?",
     answer:
-      "Die Länge eures Films hängt vom gebuchten Paket ab. In der Regel erhaltet ihr einen hochwertigen Highlightfilm, der die schönsten und emotionalsten Momente eures Tages kompakt und cinematisch zusammenfasst. Auf Wunsch sind auch längere Versionen oder zusätzliche Inhalte möglich.",
+      "Die Länge eures Films hängt vom gebuchten Paket ab. In der Regel erhaltet ihr einen hochwertigen Highlightfilm, der die schönsten und emotionalsten Momente eures Tages kompakt und hochwertig zusammenfasst. Auf Wunsch sind auch längere Versionen oder zusätzliche Inhalte möglich.",
   },
   {
     question: "In welcher Qualität erhalten wir das Video?",
@@ -43,7 +43,7 @@ export const hochzeit: FaqItem[] = [
   {
     question: "Wie würdest du deinen Videostil beschreiben?",
     answer:
-      "Mein Fokus liegt auf emotionalen, natürlichen und cinematischen Aufnahmen. Ich möchte echte Momente einfangen und daraus einen Film erstellen, der euch auch Jahre später wieder in euren Tag zurückversetzt.",
+      "Mein Fokus liegt auf emotionalen, natürlichen und hochwertigen Aufnahmen. Ich möchte echte Momente einfangen und daraus einen Film erstellen, der euch auch Jahre später wieder in euren Tag zurückversetzt.",
   },
   {
     question: "Welches Equipment nutzt du?",

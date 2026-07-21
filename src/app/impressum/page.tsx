@@ -4,7 +4,6 @@ export const metadata: Metadata = {
   title: "Impressum – JE Media",
   description: "Impressum von JE Media – Joel Enrico Ediger, Hochzeitsvideograf aus Espelkamp, NRW.",
   alternates: { canonical: "https://jemedia.de/impressum" },
-  robots: { index: false, follow: false },
 };
 
 export default function ImpressumPage() {

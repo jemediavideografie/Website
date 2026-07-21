@@ -5,12 +5,12 @@ import { PricingList, type Package, type Addon } from "@/components/pricing/Pric
 export const metadata: Metadata = {
   title: "Preise & Pakete – Hochzeitsvideograf Espelkamp",
   description:
-    "Hochzeitsvideo Pakete ab 180 € – Grundpreis + Stundensatz. Cinematische Filme in 4K von JE Media aus Espelkamp für Hochzeiten in OWL & NRW.",
+    "Hochzeitsvideo Pakete ab 180 € – Grundpreis + Stundensatz. Hochwertige Filme in 4K von JE Media aus Espelkamp für Hochzeiten in OWL & NRW.",
   alternates: { canonical: "https://jemedia.de/preise" },
   openGraph: {
     title: "Preise & Pakete – Hochzeitsvideograf Espelkamp | JE Media",
     description:
-      "Hochzeitsvideo Pakete ab 180 € – Cinematische Filme in 4K von JE Media aus Espelkamp für Hochzeiten in OWL & NRW.",
+      "Hochzeitsvideo Pakete ab 180 € – Hochwertige Filme in 4K von JE Media aus Espelkamp für Hochzeiten in OWL & NRW.",
     url: "https://jemedia.de/preise",
   },
 };
@@ -28,7 +28,7 @@ const pricingSchema = {
       {
         "@type": "Offer",
         name: "First Look & Trauung",
-        description: "First Look, Trauungszeremonie, cinematische Videobearbeitung, 4K Download",
+        description: "First Look, Trauungszeremonie, hochwertige Videobearbeitung, 4K Download",
         price: "180",
         priceCurrency: "EUR",
         priceSpecification: { "@type": "UnitPriceSpecification", price: "180", priceCurrency: "EUR", unitText: "Grundpreis" },
@@ -36,28 +36,28 @@ const pricingSchema = {
       {
         "@type": "Offer",
         name: "Trauung & Nachfeier",
-        description: "Trauungszeremonie, Nachfeier, cinematische Videobearbeitung, 4K Download",
+        description: "Trauungszeremonie, Nachfeier, hochwertige Videobearbeitung, 4K Download",
         price: "200",
         priceCurrency: "EUR",
       },
       {
         "@type": "Offer",
         name: "Get Ready, First Look & Trauung",
-        description: "Getting Ready, First Look, Trauungszeremonie, cinematische Videobearbeitung, 4K Download",
+        description: "Getting Ready, First Look, Trauungszeremonie, hochwertige Videobearbeitung, 4K Download",
         price: "270",
         priceCurrency: "EUR",
       },
       {
         "@type": "Offer",
         name: "First Look, Trauung & Nachfeier",
-        description: "First Look, Trauungszeremonie, Nachfeier, cinematische Videobearbeitung, 4K Download",
+        description: "First Look, Trauungszeremonie, Nachfeier, hochwertige Videobearbeitung, 4K Download",
         price: "300",
         priceCurrency: "EUR",
       },
       {
         "@type": "Offer",
         name: "Ganztagesreportage",
-        description: "Getting Ready, First Look, Trauungszeremonie, Nachfeier, cinematische Videobearbeitung, 4K Download",
+        description: "Getting Ready, First Look, Trauungszeremonie, Nachfeier, hochwertige Videobearbeitung, 4K Download",
         price: "350",
         priceCurrency: "EUR",
       },
@@ -74,7 +74,7 @@ const packages: Package[] = [
     includes: [
       "First Look",
       "Trauungszeremonie",
-      "Cinematische Videobearbeitung",
+      "Hochwertige Videobearbeitung",
       "Fertigstellung als 4K Download",
     ],
   },
@@ -86,7 +86,7 @@ const packages: Package[] = [
     includes: [
       "Trauungszeremonie",
       "Nachfeier",
-      "Cinematische Videobearbeitung",
+      "Hochwertige Videobearbeitung",
       "Fertigstellung als 4K Download",
     ],
   },
@@ -99,7 +99,7 @@ const packages: Package[] = [
       "Getting Ready",
       "First Look",
       "Trauungszeremonie",
-      "Cinematische Videobearbeitung",
+      "Hochwertige Videobearbeitung",
       "Fertigstellung als 4K Download",
     ],
   },
@@ -112,7 +112,7 @@ const packages: Package[] = [
       "First Look",
       "Trauungszeremonie",
       "Nachfeier",
-      "Cinematische Videobearbeitung",
+      "Hochwertige Videobearbeitung",
       "Fertigstellung als 4K Download",
     ],
   },
@@ -126,7 +126,7 @@ const packages: Package[] = [
       "First Look",
       "Trauungszeremonie",
       "Nachfeier",
-      "Cinematische Videobearbeitung",
+      "Hochwertige Videobearbeitung",
       "Fertigstellung als 4K Download",
     ],
     special: {
@@ -170,7 +170,7 @@ export default function PreisePage() {
           <h1>Preise & Pakete</h1>
           <p className="muted" style={{ maxWidth: "620px", margin: "0.5rem 0 1.5rem" }}>
             Hochzeitsfilme aus Espelkamp für Paare in OWL & NRW – alle Pakete inkl.
-            cinematischer Videobearbeitung und Übergabe in 4K.
+            hochwertiger Videobearbeitung und Übergabe in 4K.
           </p>
 
           <div className="pricing-note">

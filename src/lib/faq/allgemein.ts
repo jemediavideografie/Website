@@ -9,7 +9,7 @@ export const allgemein: FaqItem[] = [
   {
     question: "Was unterscheidet JE Media von anderen Videografen?",
     answer:
-      "Bei JE Media steht nicht nur die Aufnahme im Fokus, sondern die Geschichte dahinter. Ich lege großen Wert auf echte Emotionen, persönliche Betreuung und einen modernen, cinematischen Stil. Jeder Film wird individuell auf das Paar oder Projekt abgestimmt.",
+      "Bei JE Media steht nicht nur die Aufnahme im Fokus, sondern die Geschichte dahinter. Ich lege großen Wert auf echte Emotionen, persönliche Betreuung und einen modernen, hochwertigen Stil. Jeder Film wird individuell auf das Paar oder Projekt abgestimmt.",
   },
   {
     question: "In welchen Regionen bist du tätig?",

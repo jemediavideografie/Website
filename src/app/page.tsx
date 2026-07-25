@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { FooterCtaVideo } from "@/components/home/FooterCtaVideo";
+import { ShowreelPlayer } from "@/components/home/ShowreelPlayer";
 import { TestimonialsCarousel } from "@/components/home/TestimonialsCarousel";
 
 export const metadata: Metadata = {
@@ -155,37 +156,7 @@ export default function HomePage() {
         <div className="container">
           <span className="eyebrow-script">Meine Arbeit</span>
           <h2>Showreel</h2>
-          <div className="showreel-box">
-            <svg
-              className="showreel-f-svg"
-              viewBox="0 0 100 160"
-              fill="none"
-              aria-hidden="true"
-            >
-              <line
-                x1="38" y1="18" x2="38" y2="142"
-                stroke="var(--accent)"
-                strokeWidth="3.5"
-                strokeLinecap="round"
-                className="draw-vert"
-              />
-              <line
-                x1="38" y1="18" x2="82" y2="18"
-                stroke="var(--accent)"
-                strokeWidth="3.5"
-                strokeLinecap="round"
-                className="draw-top"
-              />
-              <line
-                x1="38" y1="76" x2="70" y2="76"
-                stroke="var(--accent)"
-                strokeWidth="3.5"
-                strokeLinecap="round"
-                className="draw-mid"
-              />
-            </svg>
-            <p className="showreel-coming-text" lang="en">Coming Soon</p>
-          </div>
+          <ShowreelPlayer />
         </div>
       </section>
 

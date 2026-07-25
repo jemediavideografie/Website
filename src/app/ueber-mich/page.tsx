@@ -6,12 +6,12 @@ export const metadata: Metadata = {
   title: "Über mich – Hochzeitsvideograf aus Espelkamp",
   description:
     "Joel aus Espelkamp – Hochzeitsvideograf mit Fokus auf emotionale, hochwertige Filme. Sony A7 III, RS4 Pro Gimbal. Hochzeiten in OWL & NRW.",
-  alternates: { canonical: "https://jemedia.de/ueber-mich" },
+  alternates: { canonical: "https://www.jemedia-videografie.de/ueber-mich" },
   openGraph: {
     title: "Über mich – Hochzeitsvideograf aus Espelkamp | JE Media",
     description:
       "Joel aus Espelkamp – Hochzeitsvideograf mit Fokus auf emotionale, hochwertige Filme. Sony A7 III, RS4 Pro Gimbal. Hochzeiten in OWL & NRW.",
-    url: "https://jemedia.de/ueber-mich",
+    url: "https://www.jemedia-videografie.de/ueber-mich",
   },
 };
 
@@ -19,8 +19,8 @@ const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Startseite", item: "https://jemedia.de" },
-    { "@type": "ListItem", position: 2, name: "Über mich", item: "https://jemedia.de/ueber-mich" },
+    { "@type": "ListItem", position: 1, name: "Startseite", item: "https://www.jemedia-videografie.de" },
+    { "@type": "ListItem", position: 2, name: "Über mich", item: "https://www.jemedia-videografie.de/ueber-mich" },
   ],
 };
 

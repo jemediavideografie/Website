@@ -1,7 +1,7 @@
 export const dynamic = "force-static";
 import type { MetadataRoute } from "next";
 
-const base = "https://jemedia.de";
+const base = "https://www.jemedia-videografie.de";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [

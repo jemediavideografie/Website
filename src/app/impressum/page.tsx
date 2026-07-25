@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Impressum – JE Media",
   description: "Impressum von JE Media – Joel Enrico Ediger, Hochzeitsvideograf aus Espelkamp, NRW.",
-  alternates: { canonical: "https://jemedia.de/impressum" },
+  alternates: { canonical: "https://www.jemedia-videografie.de/impressum" },
 };
 
 export default function ImpressumPage() {

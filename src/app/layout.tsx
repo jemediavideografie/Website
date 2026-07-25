@@ -25,7 +25,7 @@ export const viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://jemedia.de"),
+  metadataBase: new URL("https://www.jemedia-videografie.de"),
   title: {
     default: "JE Media – Hochzeitsvideograf Espelkamp & OWL",
     template: "%s | JE Media",
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     "Hochzeitsvideograf Ostwestfalen",
     "JE Media",
   ],
-  authors: [{ name: "Joel", url: "https://jemedia.de" }],
+  authors: [{ name: "Joel", url: "https://www.jemedia-videografie.de" }],
   creator: "Joel – JE Media",
   openGraph: {
     title: "JE Media – Hochzeitsvideograf Espelkamp & OWL",
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
     locale: "de_DE",
     type: "website",
     siteName: "JE Media",
-    url: "https://jemedia.de",
+    url: "https://www.jemedia-videografie.de",
   },
   twitter: {
     card: "summary_large_image",
@@ -76,20 +76,20 @@ export const metadata: Metadata = {
     googleBot: { index: true, follow: true, "max-image-preview": "large" },
   },
   alternates: {
-    canonical: "https://jemedia.de",
+    canonical: "https://www.jemedia-videografie.de",
   },
 };
 
 const personSchema = {
   "@context": "https://schema.org",
   "@type": "Person",
-  "@id": "https://jemedia.de/#joel",
+  "@id": "https://www.jemedia-videografie.de/#joel",
   name: "Joel Enrico Ediger",
   alternateName: "Joel",
   jobTitle: "Hochzeitsvideograf",
-  url: "https://jemedia.de/ueber-mich",
-  image: "https://jemedia.de/images/portrait.jpg",
-  worksFor: { "@id": "https://jemedia.de/#business" },
+  url: "https://www.jemedia-videografie.de/ueber-mich",
+  image: "https://www.jemedia-videografie.de/images/portrait.jpg",
+  worksFor: { "@id": "https://www.jemedia-videografie.de/#business" },
   sameAs: [
     "https://www.instagram.com/_je.media_/",
     "https://www.tiktok.com/@_je.media_",
@@ -100,18 +100,18 @@ const personSchema = {
 const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": ["LocalBusiness", "ProfessionalService"],
-  "@id": "https://jemedia.de/#business",
+  "@id": "https://www.jemedia-videografie.de/#business",
   name: "JE Media",
   description:
     "Hochzeitsvideograf aus Espelkamp, NRW. Emotionale Hochzeitsfilme in 4K für Paare in Ostwestfalen-Lippe und ganz NRW.",
-  url: "https://jemedia.de",
+  url: "https://www.jemedia-videografie.de",
   telephone: "+491759084870",
-  image: "https://jemedia.de/images/portrait.jpg",
-  logo: "https://jemedia.de/images/logoclean.png",
+  image: "https://www.jemedia-videografie.de/images/portrait.jpg",
+  logo: "https://www.jemedia-videografie.de/images/logoclean.png",
   priceRange: "€€",
   currenciesAccepted: "EUR",
   paymentAccepted: "Banküberweisung",
-  founder: { "@id": "https://jemedia.de/#joel" },
+  founder: { "@id": "https://www.jemedia-videografie.de/#joel" },
   address: {
     "@type": "PostalAddress",
     addressLocality: "Espelkamp",

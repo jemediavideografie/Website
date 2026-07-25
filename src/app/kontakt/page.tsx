@@ -5,12 +5,12 @@ export const metadata: Metadata = {
   title: "Anfrage stellen – Hochzeitsvideograf Espelkamp",
   description:
     "Jetzt Hochzeitsvideo anfragen: JE Media aus Espelkamp begleitet eure Hochzeit in OWL, Minden, Bielefeld und ganz NRW. Schnelle Rückmeldung innerhalb 24–48 Stunden.",
-  alternates: { canonical: "https://jemedia.de/kontakt" },
+  alternates: { canonical: "https://www.jemedia-videografie.de/kontakt" },
   openGraph: {
     title: "Anfrage stellen – Hochzeitsvideograf Espelkamp | JE Media",
     description:
       "Jetzt Hochzeitsvideo anfragen: JE Media aus Espelkamp begleitet eure Hochzeit in OWL, Minden, Bielefeld und ganz NRW.",
-    url: "https://jemedia.de/kontakt",
+    url: "https://www.jemedia-videografie.de/kontakt",
   },
 };
 
@@ -18,8 +18,8 @@ const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Startseite", item: "https://jemedia.de" },
-    { "@type": "ListItem", position: 2, name: "Kontakt & Anfrage", item: "https://jemedia.de/kontakt" },
+    { "@type": "ListItem", position: 1, name: "Startseite", item: "https://www.jemedia-videografie.de" },
+    { "@type": "ListItem", position: 2, name: "Kontakt & Anfrage", item: "https://www.jemedia-videografie.de/kontakt" },
   ],
 };
 

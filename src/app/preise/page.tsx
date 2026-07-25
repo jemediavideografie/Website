@@ -6,12 +6,12 @@ export const metadata: Metadata = {
   title: "Preise & Pakete – Hochzeitsvideograf Espelkamp",
   description:
     "Hochzeitsvideo Pakete ab 180 € – Grundpreis + Stundensatz. Hochwertige Filme in 4K von JE Media aus Espelkamp für Hochzeiten in OWL & NRW.",
-  alternates: { canonical: "https://jemedia.de/preise" },
+  alternates: { canonical: "https://www.jemedia-videografie.de/preise" },
   openGraph: {
     title: "Preise & Pakete – Hochzeitsvideograf Espelkamp | JE Media",
     description:
       "Hochzeitsvideo Pakete ab 180 € – Hochwertige Filme in 4K von JE Media aus Espelkamp für Hochzeiten in OWL & NRW.",
-    url: "https://jemedia.de/preise",
+    url: "https://www.jemedia-videografie.de/preise",
   },
 };
 
@@ -19,7 +19,7 @@ const pricingSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
   name: "Hochzeitsvideografie",
-  provider: { "@id": "https://jemedia.de/#business" },
+  provider: { "@id": "https://www.jemedia-videografie.de/#business" },
   areaServed: { "@type": "State", name: "Nordrhein-Westfalen" },
   hasOfferCatalog: {
     "@type": "OfferCatalog",
@@ -148,8 +148,8 @@ const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Startseite", item: "https://jemedia.de" },
-    { "@type": "ListItem", position: 2, name: "Preise & Pakete", item: "https://jemedia.de/preise" },
+    { "@type": "ListItem", position: 1, name: "Startseite", item: "https://www.jemedia-videografie.de" },
+    { "@type": "ListItem", position: 2, name: "Preise & Pakete", item: "https://www.jemedia-videografie.de/preise" },
   ],
 };
 

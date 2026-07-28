@@ -53,7 +53,7 @@ export default function AboutPage() {
               Ich arbeite alleine – persönlich, unauffällig und mit viel Gespür für den richtigen Moment.
             </p>
             <p>
-              Mein Portfolio und Content gibt es auf Instagram und TikTok:
+              Ich teile regelmäßig Einblicke hinter die Kulissen und aktuelle Projekte auf Instagram und TikTok.
             </p>
             <div className="contact-actions">
               <a className="btn btn-ghost" href="https://www.instagram.com/_je.media_/" target="_blank" rel="noreferrer">

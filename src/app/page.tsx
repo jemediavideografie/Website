@@ -30,15 +30,15 @@ const websiteSchema = {
 const testimonials = [
   {
     quote:
-      "Joel hat es geschafft, unseren Hochzeitstag emotional und authentisch festzuhalten. Trotz kleiner Zeitprobleme zwischendurch blieb er jederzeit ruhig, professionell und organisiert – sodass wir uns komplett auf den Moment konzentrieren konnten.",
-    name: "Alex & Julia",
-    date: "Hochzeit Dezember 2024",
+      "Absolute Herzensempfehlung!Wir sind immer noch sprachlos und zu Tränen gerührt, wenn wir uns unser Hochzeitsvideo ansehen. JE Media hat es geschafft, unseren großen Tag so perfekt, lebendig und emotional einzufangen, dass wir beim Anschauen jede Träne, jedes Lachen und jeden Gänsehautmoment noch einmal genauso erleben.",
+    name: "Timo & Madeline",
+    date: "Hochzeit August 2026",
   },
   {
     quote:
       "Unglaublich, echt Hammer geworden – vielen vielen Dank! Das hat unsere Erwartungen komplett übertroffen.",
     name: "Luis & Melina",
-    date: "Hochzeit September 2023",
+    date: "Hochzeit September 2025",
   },
   {
     quote:
@@ -47,10 +47,10 @@ const testimonials = [
     date: "Hochzeit August 2025",
   },
     {
-    quote:
-      "Absolute Herzensempfehlung!Wir sind immer noch sprachlos und zu Tränen gerührt, wenn wir uns unser Hochzeitsvideo ansehen. JE Media hat es geschafft, unseren großen Tag so perfekt, lebendig und emotional einzufangen, dass wir beim Anschauen jede Träne, jedes Lachen und jeden Gänsehautmoment noch einmal genauso erleben.",
-    name: "Timo & Madeline",
-    date: "Hochzeit August 2026",
+   quote:
+      "Joel hat es geschafft, unseren Hochzeitstag emotional und authentisch festzuhalten. Trotz kleiner Zeitprobleme zwischendurch blieb er jederzeit ruhig, professionell und organisiert – sodass wir uns komplett auf den Moment konzentrieren konnten.",
+    name: "Alex & Julia",
+    date: "Hochzeit Dezember 2025",
   },
 ];
 

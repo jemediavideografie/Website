@@ -35,10 +35,10 @@ const testimonials = [
     date: "Hochzeit August 2026",
   },
   {
-    quote:
-      "Unglaublich, echt Hammer geworden – vielen vielen Dank! Das hat unsere Erwartungen komplett übertroffen.",
-    name: "Luis & Melina",
-    date: "Hochzeit September 2025",
+   quote:
+      "Joel hat es geschafft, unseren Hochzeitstag emotional und authentisch festzuhalten. Trotz kleiner Zeitprobleme zwischendurch blieb er jederzeit ruhig, professionell und organisiert – sodass wir uns komplett auf den Moment konzentrieren konnten.",
+    name: "Alex & Julia",
+    date: "Hochzeit Dezember 2025",
   },
   {
     quote:
@@ -47,10 +47,10 @@ const testimonials = [
     date: "Hochzeit August 2025",
   },
     {
-   quote:
-      "Joel hat es geschafft, unseren Hochzeitstag emotional und authentisch festzuhalten. Trotz kleiner Zeitprobleme zwischendurch blieb er jederzeit ruhig, professionell und organisiert – sodass wir uns komplett auf den Moment konzentrieren konnten.",
-    name: "Alex & Julia",
-    date: "Hochzeit Dezember 2025",
+    quote:
+      "Unglaublich, echt Hammer geworden – vielen vielen Dank! Das hat unsere Erwartungen komplett übertroffen.",
+    name: "Luis & Melina",
+    date: "Hochzeit September 2024",
   },
 ];
 

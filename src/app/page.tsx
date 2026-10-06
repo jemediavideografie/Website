@@ -30,7 +30,7 @@ const websiteSchema = {
 const testimonials = [
   {
     quote:
-      "Absolute Herzensempfehlung!Wir sind immer noch sprachlos und zu Tränen gerührt, wenn wir uns unser Hochzeitsvideo ansehen. JE Media hat es geschafft, unseren großen Tag so perfekt, lebendig und emotional einzufangen, dass wir beim Anschauen jede Träne, jedes Lachen und jeden Gänsehautmoment noch einmal genauso erleben.",
+      "Absolute Herzensempfehlung! Wir sind immer noch sprachlos und zu Tränen gerührt, wenn wir uns unser Hochzeitsvideo ansehen. JE Media hat es geschafft, unseren großen Tag so perfekt, lebendig und emotional einzufangen, dass wir beim Anschauen jede Träne, jedes Lachen und jeden Gänsehautmoment noch einmal genauso erleben.",
     name: "Timo & Madeline",
     date: "Hochzeit August 2026",
   },

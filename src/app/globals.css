@@ -987,6 +987,17 @@ a {
   font-style: normal;
 }
 
+.testimonial-quote::after {
+  content: '\201D';
+  font-family: var(--font-script);
+  color: var(--accent);
+  font-size: 3rem;
+  line-height: 0;
+  vertical-align: -0.7rem;
+  margin-left: 0.15rem;
+  font-style: normal;
+}
+
 .testimonial-author {
   font-weight: 700;
   color: var(--text);

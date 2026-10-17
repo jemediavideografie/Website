@@ -3,7 +3,7 @@
   --bg-soft: #ede7dc;        /* Sanfter Beige-Akzent */
   --text: #2b1e16;           /* Dunkles Schokoladenbraun */
   --muted: #6e5e53;          /* Warmes Taupe */
-  --accent: #d7ad63;         /* Edles Gold für Highlights & Header/Footer-Text */
+  --accent: #d7ad63;         /* Edles Gold */
   --border: #e0d7c8;         /* Feine Ränder */
   --font-heading: var(--font-cinzel), 'Cinzel', Georgia, serif;
   --font-script: var(--font-great-vibes), 'Great Vibes', cursive;
@@ -85,7 +85,7 @@ a {
   width: min(780px, 92%);
 }
 
-/* --- HEADER & NAVIGATION (SCHWARZ MIT GOLDENER SCHRIFT) --- */
+/* --- HEADER & NAVIGATION (DUNKEL MIT GOLD) --- */
 .site-header {
   position: sticky;
   top: 0;
@@ -211,11 +211,8 @@ a {
   margin-top: 1.5rem;
 }
 
-/* Über mich Bereich */
 .home-about {
-  background: #ede3d2 !important;
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
+  background: var(--bg-soft);
 }
 
 .hero-overlay {
@@ -261,6 +258,33 @@ a {
   font-weight: 600;
 }
 
+.site-footer {
+  border-top: 1px solid #1f2430 !important;
+  padding: 1.2rem 0 1.6rem;
+  background: #0b0d12 !important;
+  background-color: #0b0d12 !important;
+  color: var(--accent) !important;
+}
+
+.footer-wrap {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+}
+
+.footer-links {
+  display: flex;
+  gap: 0.8rem;
+  color: var(--accent) !important;
+}
+
+.footer-links a {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  color: var(--accent) !important;
+}
+
 .split {
   display: grid;
   gap: 2rem;
@@ -276,20 +300,11 @@ a {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
-/* Karten & Boxen abgrenzen */
-.card, .testimonial-card, .faq-item, .pricing-item {
-  background: #ffffff !important;
-  border: 1px solid #d4c5b2 !important;
-  box-shadow: 0 4px 20px rgba(43, 30, 22, 0.05);
-}
-
-/* Sektion "Mein Ablauf / So arbeite ich" */
-.home-process, #ablauf {
-  background: var(--bg-soft) !important;
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
-  padding-top: 5rem;
-  padding-bottom: 5rem;
+.card {
+  border: 1px solid var(--border);
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 1.1rem;
 }
 
 .home-process h2 {
@@ -301,6 +316,29 @@ a {
   border-color: var(--border);
   background: #ffffff;
   padding-top: 1.5rem;
+}
+
+@media (min-width: 901px) {
+  .process-grid {
+    position: relative;
+  }
+
+  .process-grid::before {
+    content: "";
+    position: absolute;
+    top: 1rem;
+    bottom: 1rem;
+    left: 50%;
+    width: 1px;
+    transform: translateX(-50%);
+    background: linear-gradient(
+      180deg,
+      rgba(215, 173, 99, 0.08),
+      rgba(215, 173, 99, 0.35),
+      rgba(215, 173, 99, 0.08)
+    );
+    pointer-events: none;
+  }
 }
 
 .process-step {
@@ -358,104 +396,46 @@ a {
   border-color: var(--accent);
 }
 
-.btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 999px;
-  border: 1px solid var(--accent);
-  background: var(--accent);
-  color: #0b0d12;
-  font-weight: 600;
-  padding: 0.55rem 1rem;
-  min-height: 44px;
-  transition: 0.2s ease;
-  white-space: nowrap;
+.faq-list {
+  display: grid;
+  gap: 0.9rem;
 }
 
-.btn:hover {
-  transform: translateY(-1px);
-}
-
-.btn-ghost {
-  background: rgba(255, 255, 255, 0.85);
-  color: var(--text) !important;
-  border-color: var(--border);
-  backdrop-filter: blur(14px);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-}
-
-.btn-ghost:hover {
-  background: #ffffff;
-}
-
-.contact-strip {
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
-}
-
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
-}
-
-/* ---- SHOWREEL (16:9 PLAYER & FACADE) ---- */
-.home-showreel h2 {
-  margin-bottom: 0;
-}
-
-.showreel-player {
-  margin: 2rem auto 0;
-  max-width: 900px;
-  aspect-ratio: 16 / 9;
+.faq-item {
   border: 1px solid var(--border);
-  border-radius: 24px;
-  overflow: hidden;
+  border-radius: 14px;
   background: #ffffff;
-  position: relative;
-}
-
-.showreel-frame,
-.showreel-facade {
-  display: block;
-  width: 100%;
-  height: 100%;
-  border: 0;
-}
-
-.showreel-facade {
-  position: relative;
   padding: 0;
-  margin: 0;
-  background: none;
+}
+
+.faq-item summary {
   cursor: pointer;
-  color: inherit;
-  width: 100%;
-  height: 100%;
+  padding: 1rem 1.1rem;
+  font-weight: 800;
+  color: var(--text);
+  list-style: none;
+  position: relative;
+  padding-right: 2.6rem;
 }
 
-.showreel-facade img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), filter 0.4s ease;
+.faq-item summary::-webkit-details-marker {
+  display: none;
 }
 
-.showreel-facade:hover img,
-.showreel-facade:focus-visible img {
-  transform: scale(1.03);
-  filter: brightness(0.92);
-}
-
-.showreel-play {
+.faq-item summary::after {
+  content: '+';
   position: absolute;
-  inset: 0;
-  margin: auto;
-  width:
+  right: 1.05rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--accent);
+  font-weight: 900;
+}
+
+.faq-item[open] summary::after {
+  content: '-';
+}
+
+.faq-item[open] {
+  border-color: rgba(215, 173, 99, 0.7);
+  background: linear-gradient(155deg, rgba(215, 173, 99, 0.0

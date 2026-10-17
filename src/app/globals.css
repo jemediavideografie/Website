@@ -796,6 +796,20 @@ a {
 }
 
 /* ---- Pricing ---- */
+.pricing-note {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: 1px solid rgba(215, 173, 99, 0.35);
+  background: rgba(215, 173, 99, 0.07);
+  border-radius: 999px;
+  padding: 0.45rem 1rem;
+  color: var(--accent);
+  font-size: 0.88rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
 .pricing-list {
   display: grid;
   gap: 0.75rem;
@@ -807,6 +821,12 @@ a {
   border-radius: 16px;
   background: #ffffff;
   overflow: hidden;
+  transition: border-color 200ms ease;
+}
+
+.pricing-item[data-open="true"] {
+  border-color: rgba(215, 173, 99, 0.7);
+  background: linear-gradient(155deg, rgba(215, 173, 99, 0.09), var(--bg-soft));
 }
 
 .pricing-summary {
@@ -821,6 +841,45 @@ a {
   gap: 1rem;
   color: var(--text);
   position: relative;
+  padding-right: 3rem;
+}
+
+.pricing-summary::after {
+  content: '+';
+  position: absolute;
+  right: 1.05rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--accent);
+  font-weight: 900;
+  width: 1.4rem;
+  height: 1.4rem;
+  display: grid;
+  place-items: center;
+  border-radius: 999px;
+  border: 1px solid rgba(215, 173, 99, 0.45);
+  background: rgba(215, 173, 99, 0.08);
+}
+
+.pricing-item[data-open="true"] .pricing-summary::after {
+  content: '-';
+}
+
+.pricing-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 999px;
+  background: rgba(215, 173, 99, 0.15);
+  border: 1px solid rgba(215, 173, 99, 0.45);
+  color: var(--accent);
+  font-size: 0.78rem;
+  font-weight: 700;
+  flex-shrink: 0;
+  font-family: var(--font-heading);
+  letter-spacing: 0.04em;
 }
 
 .pricing-name {
@@ -834,10 +893,54 @@ a {
   font-weight: 700;
   font-size: 0.92rem;
   white-space: nowrap;
+  margin-right: 0.5rem;
 }
 
 .pricing-panel {
   padding: 0 1.2rem 1.2rem;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition:
+    max-height 400ms cubic-bezier(0.07, 0.82, 0.16, 1),
+    opacity 220ms ease;
+}
+
+.pricing-item[data-open="true"] .pricing-panel {
+  max-height: 1200px;
+  opacity: 1;
+}
+
+.pricing-includes {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0.8rem;
+  display: grid;
+  gap: 0.35rem;
+}
+
+.pricing-includes li {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.pricing-includes li::before {
+  content: '✓';
+  color: var(--accent);
+  margin-right: 0.55rem;
+  font-weight: 700;
+}
+
+@media (max-width: 900px) {
+  .pricing-summary {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding-right: 2.8rem;
+  }
+
+  .pricing-price {
+    margin-left: 3.2rem;
+  }
 }
 
 /* ---- Media Queries ---- */

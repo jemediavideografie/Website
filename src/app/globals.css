@@ -943,6 +943,53 @@ a {
   }
 }
 
+/* ---- Pricing Addons ---- */
+.pricing-addons {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.pricing-addons h3 {
+  margin-bottom: 0.75rem;
+  font-size: 1.1rem;
+}
+
+.pricing-addons-list {
+  display: grid;
+  gap: 0.6rem;
+}
+
+.pricing-addon-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.9rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: #ffffff;
+  gap: 1rem;
+}
+
+.pricing-addon-name {
+  font-weight: 600;
+  color: var(--text);
+}
+
+.pricing-addon-price {
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 0.92rem;
+  white-space: nowrap;
+}
+
+@media (max-width: 900px) {
+  .pricing-addon-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.3rem;
+  }
+}
+
 /* ---- Media Queries ---- */
 @media (max-width: 900px) {
   .footer-wrap {

@@ -211,7 +211,7 @@ a {
   margin-top: 1.5rem;
 }
 
-/* Über mich Bereich kontrastreicher abgegrenzt */
+/* Über mich Bereich */
 .home-about {
   background: #ede3d2 !important;
   border-top: 1px solid var(--border);
@@ -276,14 +276,14 @@ a {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
-/* Karten & Boxen schärfer abgrenzen */
+/* Karten & Boxen abgrenzen */
 .card, .testimonial-card, .faq-item, .pricing-item {
   background: #ffffff !important;
   border: 1px solid #d4c5b2 !important;
   box-shadow: 0 4px 20px rgba(43, 30, 22, 0.05);
 }
 
-/* Sektion "Mein Ablauf / So arbeite ich" klarer abtrennen */
+/* Sektion "Mein Ablauf / So arbeite ich" */
 .home-process, #ablauf {
   background: var(--bg-soft) !important;
   border-top: 1px solid var(--border);
@@ -458,22 +458,4 @@ a {
   position: absolute;
   inset: 0;
   margin: auto;
-  width: 78px;
-  height: 78px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  color: #0b0d12;
-  background: var(--accent);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.showreel-play svg {
-  width: 30px;
-  height: 30px;
-  margin-left: 4px;
-}
-
-.showreel-facade:hover
+  width:

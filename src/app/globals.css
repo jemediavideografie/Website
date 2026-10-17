@@ -1,10 +1,10 @@
 :root {
-  --bg: #0b0d12;
-  --bg-soft: #121722;
-  --text: #f5f7fa;
-  --muted: #a7b0c0;
-  --accent: #d7ad63;
-  --border: #252c3a;
+  --bg: #f8f7f5;
+  --bg-soft: #efece6;
+  --text: #1a1d24;
+  --muted: #5c6370;
+  --accent: #b88e4c;
+  --border: #e2ded7;
   --font-heading: var(--font-cinzel), 'Cinzel', Georgia, serif;
   --font-script: var(--font-great-vibes), 'Great Vibes', cursive;
 }
@@ -36,8 +36,8 @@ html,
 body {
   margin: 0;
   padding: 0;
-  background: #0b0d12 !important;
-  background-color: #0b0d12 !important;
+  background: var(--bg) !important;
+  background-color: var(--bg) !important;
   background-image: none !important;
   background-repeat: no-repeat !important;
   background-attachment: fixed !important;
@@ -90,7 +90,7 @@ a {
   z-index: 120;
   border-bottom: 1px solid var(--border);
   backdrop-filter: blur(14px);
-  background: rgba(11, 13, 18, 0.8) !important;
+ background: rgba(248, 247, 245, 0.85) !important; /* Helle Transparenz */
 }
 
 .nav-wrap {
@@ -256,8 +256,8 @@ a {
 .site-footer {
   border-top: 1px solid var(--border);
   padding: 1.2rem 0 1.6rem;
-  background: #0b0d12 !important;
-  background-color: #0b0d12 !important;
+  background: var(--bg) !important;
+  background-color: var(--bg) !important;
 }
 
 .footer-wrap {
@@ -295,7 +295,7 @@ a {
 
 .card {
   border: 1px solid var(--border);
-  background: linear-gradient(155deg, rgb(255 255 255 / 4%), rgb(255 255 255 / 2%));
+  background: rgba(255, 255, 255, 0.7);
   border-radius: 16px;
   padding: 1.1rem;
 }

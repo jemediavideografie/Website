@@ -1,15 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..700;1,400..700&display=swap');
 
 :root {
-  --bg: #f7f3eb;             /* Warmes Creme aus deinem Screenshot */
-  --bg-soft: #ede7dc;        /* Sanfter Beige-Akzent */
-  --text: #2b1e16;           /* Dunkles Schokoladenbraun für die Schrift */
+  --bg: #f7f3eb;             /* Warmes Creme */
+  --bg-soft: #ede7dc;        /* Beige Akzent */
+  --text: #2b1e16;           /* Dunkles Schokoladenbraun */
   --muted: #6e5e53;          /* Warmes Taupe */
-  --accent: #d7ad63;         /* Edles Gold für Highlights, Header & Footer */
+  --accent: #d7ad63;         /* Gold für Akzente, Header & Footer */
   --border: #e0d7c8;         /* Feine Ränder */
   --font-heading: var(--font-cinzel), 'Cinzel', Georgia, serif;
   --font-script: var(--font-great-vibes), 'Great Vibes', cursive;
-  --font-footer: 'Playfair Display', Georgia, serif; /* Eigene Schriftart für den Footer */
+  --font-footer: 'Playfair Display', Georgia, serif;
 }
 
 .skip-link {
@@ -88,7 +88,7 @@ a {
   width: min(780px, 92%);
 }
 
-/* --- HEADER & NAVIGATION (SCHWARZ MIT GOLDENER SCHRIFT) --- */
+/* --- HEADER & NAVIGATION (SCHWARZ MIT GOLD) --- */
 .site-header {
   position: sticky;
   top: 0;
@@ -261,7 +261,7 @@ a {
   font-weight: 600;
 }
 
-/* --- FOOTER (SCHWARZ MIT GOLDENER SCHRIFT & EIGENER SCHRIFTART) --- */
+/* --- FOOTER (SCHWARZ MIT GOLD & PLAYFAIR DISPLAY) --- */
 .site-footer {
   border-top: 1px solid #1f2430 !important;
   padding: 1.5rem 0 1.8rem;
@@ -294,57 +294,4 @@ a {
   font-size: 0.98rem;
   letter-spacing: 0.02em;
   transition: color 0.2s ease, opacity 0.2s ease;
-  opacity: 0.88;
-}
-
-.footer-links a:hover {
-  color: #ffffff !important;
-  opacity: 1;
-}
-
-.split {
-  display: grid;
-  gap: 2rem;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
-.card-grid {
-  display: grid;
-  gap: 1.2rem;
-}
-
-.card-grid.two {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
-.card {
-  border: 1px solid var(--border);
-  background: #ffffff;
-  border-radius: 16px;
-  padding: 1.1rem;
-}
-
-.home-process h2 {
-  margin-bottom: 1rem;
-}
-
-.process-card {
-  position: relative;
-  border-color: var(--border);
-  background: #ffffff;
-  padding-top: 1.5rem;
-}
-
-@media (min-width: 901px) {
-  .process-grid {
-    position: relative;
-  }
-
-  .process-grid::before {
-    content: "";
-    position: absolute;
-    top: 1rem;
-    bottom: 1rem;
-    left: 50%;
-    width: 1px;
-    transform: translateX(-
+  opacity: 0.88

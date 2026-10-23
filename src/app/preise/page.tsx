@@ -139,9 +139,9 @@ const packages: Package[] = [
 ];
 
 const addons: Addon[] = [
+  { name: "Aufnahmen für Social Media", price: "auf Anfrage" },
   { name: "Drohnenaufnahmen", price: "auf Anfrage" },
   { name: "Events & Veranstaltungen", price: "auf Anfrage" },
-  { name: "Automotive", price: "auf Anfrage" },
 ];
 
 const breadcrumbSchema = {

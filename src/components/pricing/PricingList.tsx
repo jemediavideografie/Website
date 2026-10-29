@@ -6,7 +6,7 @@ export type Package = {
   id: string;
   name: string;
   base: number;
-  hourly: number;
+  hourly?: number; // Das '?' macht das Feld optional
   includes: string[];
   special?: {
     label: string;

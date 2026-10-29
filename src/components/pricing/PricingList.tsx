@@ -70,17 +70,17 @@ export function PricingList({ packages, addons }: { packages: Package[]; addons:
                 </ul>
 
                 {pkg.special && (
-                  <div className="pricing-special">
-                    <p className="pricing-special-title">
-                      ➕ Optionales Upgrade: {pkg.special.label}
-                    </p>
+                 <div className="pricing-special">
+                 <p className="pricing-special-title">
+                    Option: {pkg.special.label} <span className="muted" style={{ fontSize: "0.85em" }}>(nur Videografie)</span>
+                </p>
                     
                     <p className="pricing-special-price">
-                      {pkg.special.pricePrefix ? `${pkg.special.pricePrefix} ` : ""}
-                      {typeof pkg.special.price === "number"
-                        ? `${pkg.special.price.toLocaleString("de-DE")},– €`
-                        : pkg.special.price}
-                    </p>
+                    {pkg.special.pricePrefix ? `${pkg.special.pricePrefix} ` : ""}
+                    {typeof pkg.special.price === "number"
+                    ? `${pkg.special.price.toLocaleString("de-DE")},– €`
+                    : pkg.special.price}
+                </p>
                     
                     <p className="pricing-special-note">{pkg.special.note}</p>
                   </div>

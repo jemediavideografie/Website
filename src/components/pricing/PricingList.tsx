@@ -7,6 +7,7 @@ export type Package = {
   name: string;
   base: number;
   hourly?: number;
+  priceNote?: string; // NEU: Optionaler Zusatzhinweis beim Preis
   includes: string[];
   special?: {
     label: string;
@@ -14,6 +15,7 @@ export type Package = {
     pricePrefix?: string;
     note: string;
   };
+};
 };
 
 export type Addon = { name: string; price: string };
@@ -49,8 +51,9 @@ export function PricingList({ packages, addons }: { packages: Package[]; addons:
                 
                 {/* Hauptpreis mit klarem Hinweis, dass es sich um die reine Videografie handelt */}
                 <span className="pricing-price">
-                  {pkg.base.toLocaleString("de-DE")},– € (nur Videografie)
+                  {pkg.base.toLocaleString("de-DE")},– €
                   {pkg.hourly ? ` + ${pkg.hourly} €/h` : ""}
+                  {pkg.priceNote ? ` ${pkg.priceNote}` : ""} {/* NEU: Wird nur angezeigt, wenn definiert */}
                 </span>
               </button>
 

@@ -73,8 +73,8 @@ const packages: Package[] = [
     includes: [
       "First Look",
       "Trauungszeremonie",
-      "4 Stunden videografische Begleitung"
-      "Jede weitere Stunde 120 € mehr"
+      "4 Stunden videografische Begleitung",
+      "Jede weitere Stunde 120 € mehr",
       "Hochwertige Videobearbeitung",
       "Fertigstellung als 4K Download",
     ],
@@ -86,8 +86,8 @@ const packages: Package[] = [
     includes: [
       "Trauungszeremonie",
       "Nachfeier",
-      "8 Stunden videografische Begleitung"
-      "Jede weitere Stunde 110 € mehr"
+      "8 Stunden videografische Begleitung",
+      "Jede weitere Stunde 110 € mehr",
       "Hochwertige Videobearbeitung",
       "Fertigstellung als 4K Download",
     ],
@@ -100,8 +100,8 @@ const packages: Package[] = [
       "Getting Ready",
       "First Look",
       "Trauungszeremonie",
-      "Bis zu 8 Stunden videografische Begleitung"
-      "Jede weitere Stunde 95 € mehr"
+      "Bis zu 8 Stunden videografische Begleitung",
+      "Jede weitere Stunde 95 € mehr",
       "Hochwertige Videobearbeitung",
       "Fertigstellung als 4K Download",
     ],
@@ -114,8 +114,8 @@ const packages: Package[] = [
       "First Look",
       "Trauungszeremonie",
       "Nachfeier",
-      "Bis zu 10 Stunden videografische Begleitung"
-      "Jede weitere Stunde 90 € mehr"
+      "Bis zu 10 Stunden videografische Begleitung",
+      "Jede weitere Stunde 90 € mehr",
       "Hochwertige Videobearbeitung",
       "Fertigstellung als 4K Download",
     ],
@@ -129,8 +129,8 @@ const packages: Package[] = [
       "First Look",
       "Trauungszeremonie",
       "Nachfeier",
-      "Bis zu 14 Stunden videografische Begleitung"
-      "Jede weitere Stunde 75 € mehr"
+      "Bis zu 14 Stunden videografische Begleitung",
+      "Jede weitere Stunde 75 € mehr",
       "Hochwertige Videobearbeitung",
       "Fertigstellung als 4K Download",
     ],

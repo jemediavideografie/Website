@@ -46,7 +46,6 @@ export function PricingList({ packages, addons }: { packages: Package[]; addons:
               >
                 <span className="pricing-num">{pkg.id}</span>
                 <span className="pricing-name">{pkg.name}</span>
-                
                 <span className="pricing-price">
                   {pkg.base.toLocaleString("de-DE")},– €
                   {pkg.hourly ? ` + ${pkg.hourly} €/h` : ""}
@@ -70,17 +69,12 @@ export function PricingList({ packages, addons }: { packages: Package[]; addons:
                     <p className="pricing-special-title">
                       Option: {pkg.special.label}
                     </p>
-                    
-                    <p 
-                      className="pricing-special-price" 
-                      style={{ fontSize: "0.95rem", fontWeight: "normal", opacity: 0.9 }}
-                    >
+                    <p className="pricing-special-price">
                       {pkg.special.pricePrefix ? `${pkg.special.pricePrefix} ` : ""}
                       {typeof pkg.special.price === "number"
                         ? `${pkg.special.price.toLocaleString("de-DE")},– €`
                         : pkg.special.price}
                     </p>
-                    
                     <p className="pricing-special-note">{pkg.special.note}</p>
                   </div>
                 )}

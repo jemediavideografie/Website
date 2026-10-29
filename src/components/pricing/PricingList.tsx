@@ -6,11 +6,11 @@ export type Package = {
   id: string;
   name: string;
   base: number;
-  hourly?: number; // Das '?' macht das Feld optional
+  hourly?: number;
   includes: string[];
   special?: {
     label: string;
-    price: number| string;
+    price: number | string;
     pricePrefix?: string;
     note: string;
   };
@@ -46,10 +46,14 @@ export function PricingList({ packages, addons }: { packages: Package[]; addons:
               >
                 <span className="pricing-num">{pkg.id}</span>
                 <span className="pricing-name">{pkg.name}</span>
+                
+                {/* 1. KORREKTUR: H/Stundensatz nur anzeigen, wenn 'hourly' wirklich existiert */}
                 <span className="pricing-price">
-                  {pkg.base},– + {pkg.hourly},–/h
+                  {pkg.base.toLocaleString("de-DE")},– €
+                  {pkg.hourly ? ` + ${pkg.hourly} €/h` : ""}
                 </span>
               </button>
+
               <div
                 id={panelId}
                 className="pricing-panel"
@@ -61,14 +65,21 @@ export function PricingList({ packages, addons }: { packages: Package[]; addons:
                     <li key={item}>{item}</li>
                   ))}
                 </ul>
+
                 {pkg.special && (
                   <div className="pricing-special">
                     <p className="pricing-special-title">
                       Option: {pkg.special.label}
                     </p>
+                    
+                    {/* 2. KORREKTUR: Prüfen ob Zahl (mit €) oder String ("Auf Anfrage") */}
                     <p className="pricing-special-price">
-                      {pkg.special.pricePrefix}{pkg.special.price.toLocaleString("de-DE")},– €
+                      {pkg.special.pricePrefix ? `${pkg.special.pricePrefix} ` : ""}
+                      {typeof pkg.special.price === "number"
+                        ? `${pkg.special.price.toLocaleString("de-DE")},– €`
+                        : pkg.special.price}
                     </p>
+                    
                     <p className="pricing-special-note">{pkg.special.note}</p>
                   </div>
                 )}

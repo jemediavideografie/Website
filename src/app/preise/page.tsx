@@ -5,12 +5,12 @@ import { PricingList, type Package, type Addon } from "@/components/pricing/Pric
 export const metadata: Metadata = {
   title: "Preise & Pakete – Hochzeitsvideograf Espelkamp",
   description:
-    "Hochzeitsvideo Pakete ab 180 € – Grundpreis + Stundensatz. Hochwertige Filme in 4K von JE Media aus Espelkamp für Hochzeiten in OWL & NRW.",
+    "Hochzeitsvideo Pakete ab 650 €. Hochwertige Filme in 4K von JE Media aus Espelkamp für Hochzeiten in OWL & NRW.",
   alternates: { canonical: "https://www.jemedia-videografie.de/preise" },
   openGraph: {
     title: "Preise & Pakete – Hochzeitsvideograf Espelkamp | JE Media",
     description:
-      "Hochzeitsvideo Pakete ab 180 € – Hochwertige Filme in 4K von JE Media aus Espelkamp für Hochzeiten in OWL & NRW.",
+      "Hochzeitsvideo Pakete ab 650 €. Hochwertige Filme in 4K von JE Media aus Espelkamp für Hochzeiten in OWL & NRW.",
     url: "https://www.jemedia-videografie.de/preise",
   },
 };
@@ -28,37 +28,37 @@ const pricingSchema = {
       {
         "@type": "Offer",
         name: "First Look & Trauung",
-        description: "First Look, Trauungszeremonie, hochwertige Videobearbeitung, 4K Download",
-        price: "180",
+        description: "First Look, Trauungszeremonie, 4 Stunden videografische Begleitung, hochwertige Videobearbeitung, 4K Download",
+        price: "650",
         priceCurrency: "EUR",
-        priceSpecification: { "@type": "UnitPriceSpecification", price: "180", priceCurrency: "EUR", unitText: "Grundpreis" },
+        priceSpecification: { "@type": "UnitPriceSpecification", price: "650", priceCurrency: "EUR", unitText: "Grundpreis" },
       },
       {
         "@type": "Offer",
         name: "Trauung & Nachfeier",
-        description: "Trauungszeremonie, Nachfeier, hochwertige Videobearbeitung, 4K Download",
-        price: "200",
+        description: "Trauungszeremonie, Nachfeier, 8 Stunden videografische Begleitung, hochwertige Videobearbeitung, 4K Download",
+        price: "800",
         priceCurrency: "EUR",
       },
       {
         "@type": "Offer",
         name: "Get Ready, First Look & Trauung",
-        description: "Getting Ready, First Look, Trauungszeremonie, hochwertige Videobearbeitung, 4K Download",
-        price: "270",
+        description: "Getting Ready, First Look, Trauungszeremonie, bis zu 10 Stunden videografische Begleitung, hochwertige Videobearbeitung, 4K Download",
+        price: "950",
         priceCurrency: "EUR",
       },
       {
         "@type": "Offer",
         name: "First Look, Trauung & Nachfeier",
-        description: "First Look, Trauungszeremonie, Nachfeier, hochwertige Videobearbeitung, 4K Download",
-        price: "300",
+        description: "First Look, Trauungszeremonie, Nachfeier, bis zu 12 Stunden videografische Begleitung hochwertige Videobearbeitung, 4K Download",
+        price: "1100",
         priceCurrency: "EUR",
       },
       {
         "@type": "Offer",
         name: "Ganztagesreportage",
-        description: "Getting Ready, First Look, Trauungszeremonie, Nachfeier, hochwertige Videobearbeitung, 4K Download",
-        price: "350",
+        description: "Getting Ready, First Look, Trauungszeremonie, Nachfeier, bis zu 14 Stunden videografische Begleitung, hochwertige Videobearbeitung, 4K Download",
+        price: "1400",
         priceCurrency: "EUR",
       },
     ],
@@ -69,11 +69,12 @@ const packages: Package[] = [
   {
     id: "01",
     name: "First Look & Trauung",
-    base: 180,
-    hourly: 45,
+    base: 650,
     includes: [
       "First Look",
       "Trauungszeremonie",
+      "4 Stunden videografische Begleitung",
+      "Jede weitere Stunde 120 € mehr",
       "Hochwertige Videobearbeitung",
       "Fertigstellung als 4K Download",
     ],
@@ -81,11 +82,12 @@ const packages: Package[] = [
   {
     id: "02",
     name: "Trauung & Nachfeier",
-    base: 200,
-    hourly: 65,
+    base: 800,
     includes: [
       "Trauungszeremonie",
       "Nachfeier",
+      "8 Stunden videografische Begleitung",
+      "Jede weitere Stunde 110 € mehr",
       "Hochwertige Videobearbeitung",
       "Fertigstellung als 4K Download",
     ],
@@ -93,12 +95,13 @@ const packages: Package[] = [
   {
     id: "03",
     name: "Get Ready, First Look & Trauung",
-    base: 270,
-    hourly: 40,
+    base: 950,
     includes: [
       "Getting Ready",
       "First Look",
       "Trauungszeremonie",
+      "Bis zu 8 Stunden videografische Begleitung",
+      "Jede weitere Stunde 95 € mehr",
       "Hochwertige Videobearbeitung",
       "Fertigstellung als 4K Download",
     ],
@@ -106,12 +109,13 @@ const packages: Package[] = [
   {
     id: "04",
     name: "First Look, Trauung & Nachfeier",
-    base: 300,
-    hourly: 35,
+    base: 1100,
     includes: [
       "First Look",
       "Trauungszeremonie",
       "Nachfeier",
+      "Bis zu 10 Stunden videografische Begleitung",
+      "Jede weitere Stunde 90 € mehr",
       "Hochwertige Videobearbeitung",
       "Fertigstellung als 4K Download",
     ],
@@ -119,29 +123,29 @@ const packages: Package[] = [
   {
     id: "05",
     name: "Ganztagesreportage",
-    base: 350,
-    hourly: 25,
+    base: 1400,
     includes: [
       "Getting Ready",
       "First Look",
       "Trauungszeremonie",
       "Nachfeier",
+      "Bis zu 14 Stunden videografische Begleitung",
+      "Jede weitere Stunde 75 € mehr",
       "Hochwertige Videobearbeitung",
       "Fertigstellung als 4K Download",
     ],
     special: {
       label: "Mit Fotograf & Fotobox",
-      price: 1300,
-      pricePrefix: "ab ",
-      note: "Gesamtpreis · kein Stundensatz · Fotobox inklusive",
+      price: "Auf Anfrage",
+      note: "kein Stundensatz · Fotobox inklusive",
     },
   },
 ];
 
 const addons: Addon[] = [
+  { name: "Aufnahmen für Social Media", price: "auf Anfrage" },
   { name: "Drohnenaufnahmen", price: "auf Anfrage" },
   { name: "Events & Veranstaltungen", price: "auf Anfrage" },
-  { name: "Automotive", price: "auf Anfrage" },
 ];
 
 const breadcrumbSchema = {

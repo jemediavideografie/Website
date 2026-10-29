@@ -10,7 +10,7 @@ export type Package = {
   includes: string[];
   special?: {
     label: string;
-    price: number;
+    price: number| string;
     pricePrefix?: string;
     note: string;
   };

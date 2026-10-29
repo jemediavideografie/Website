@@ -7,7 +7,6 @@ export type Package = {
   name: string;
   base: number;
   hourly?: number;
-  priceNote?: string; // NEU: Optionaler Zusatzhinweis beim Preis
   includes: string[];
   special?: {
     label: string;
@@ -15,7 +14,6 @@ export type Package = {
     pricePrefix?: string;
     note: string;
   };
-};
 };
 
 export type Addon = { name: string; price: string };
@@ -49,11 +47,10 @@ export function PricingList({ packages, addons }: { packages: Package[]; addons:
                 <span className="pricing-num">{pkg.id}</span>
                 <span className="pricing-name">{pkg.name}</span>
                 
-                {/* Hauptpreis mit klarem Hinweis, dass es sich um die reine Videografie handelt */}
+                {/* Sauberer Preis oben rechts ohne störende Zusätze */}
                 <span className="pricing-price">
                   {pkg.base.toLocaleString("de-DE")},– €
                   {pkg.hourly ? ` + ${pkg.hourly} €/h` : ""}
-                  {pkg.priceNote ? ` ${pkg.priceNote}` : ""} {/* NEU: Wird nur angezeigt, wenn definiert */}
                 </span>
               </button>
 
@@ -70,17 +67,17 @@ export function PricingList({ packages, addons }: { packages: Package[]; addons:
                 </ul>
 
                 {pkg.special && (
-                 <div className="pricing-special">
-                 <p className="pricing-special-title">
-                    Option: {pkg.special.label} <span className="muted" style={{ fontSize: "0.85em" }}>(nur Videografie)</span>
-                </p>
+                  <div className="pricing-special">
+                    <p className="pricing-special-title">
+                      Option: {pkg.special.label}
+                    </p>
                     
                     <p className="pricing-special-price">
-                    {pkg.special.pricePrefix ? `${pkg.special.pricePrefix} ` : ""}
-                    {typeof pkg.special.price === "number"
-                    ? `${pkg.special.price.toLocaleString("de-DE")},– €`
-                    : pkg.special.price}
-                </p>
+                      {pkg.special.pricePrefix ? `${pkg.special.pricePrefix} ` : ""}
+                      {typeof pkg.special.price === "number"
+                        ? `${pkg.special.price.toLocaleString("de-DE")},– €`
+                        : pkg.special.price}
+                    </p>
                     
                     <p className="pricing-special-note">{pkg.special.note}</p>
                   </div>

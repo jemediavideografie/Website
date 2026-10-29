@@ -119,8 +119,7 @@ const packages: Package[] = [
       "Hochwertige Videobearbeitung",
       "Fertigstellung als 4K Download",
     ],
-  },
-  {
+{
     id: "05",
     name: "Ganztagesreportage",
     base: 1400,
@@ -137,7 +136,7 @@ const packages: Package[] = [
     special: {
       label: "Mit Fotograf & Fotobox",
       price: "Aufpreis auf Anfrage",
-      note: "Basispreis gilt nur für Videografie · kein Stundensatz · Fotobox inklusive",
+      note: "Grundpreis 1.400 € gilt nur für Videografie · kein Stundensatz · Fotobox inklusive",
     },
   },
 ];

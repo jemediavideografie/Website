@@ -136,7 +136,7 @@ const packages: Package[] = [
     ],
     special: {
       label: "Mit Fotograf & Fotobox",
-      price: Auf Anfrage,
+      price: "Auf Anfrage",
       note: "kein Stundensatz · Fotobox inklusive",
     },
   },

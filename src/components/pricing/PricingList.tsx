@@ -47,9 +47,9 @@ export function PricingList({ packages, addons }: { packages: Package[]; addons:
                 <span className="pricing-num">{pkg.id}</span>
                 <span className="pricing-name">{pkg.name}</span>
                 
-                {/* 1. KORREKTUR: H/Stundensatz nur anzeigen, wenn 'hourly' wirklich existiert */}
+                {/* Hauptpreis mit klarem Hinweis, dass es sich um die reine Videografie handelt */}
                 <span className="pricing-price">
-                  {pkg.base.toLocaleString("de-DE")},– €
+                  {pkg.base.toLocaleString("de-DE")},– € (nur Videografie)
                   {pkg.hourly ? ` + ${pkg.hourly} €/h` : ""}
                 </span>
               </button>
@@ -69,10 +69,9 @@ export function PricingList({ packages, addons }: { packages: Package[]; addons:
                 {pkg.special && (
                   <div className="pricing-special">
                     <p className="pricing-special-title">
-                      Option: {pkg.special.label}
+                      ➕ Optionales Upgrade: {pkg.special.label}
                     </p>
                     
-                    {/* 2. KORREKTUR: Prüfen ob Zahl (mit €) oder String ("Auf Anfrage") */}
                     <p className="pricing-special-price">
                       {pkg.special.pricePrefix ? `${pkg.special.pricePrefix} ` : ""}
                       {typeof pkg.special.price === "number"

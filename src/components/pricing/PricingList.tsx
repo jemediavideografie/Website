@@ -47,7 +47,7 @@ export function PricingList({ packages, addons }: { packages: Package[]; addons:
                 <span className="pricing-num">{pkg.id}</span>
                 <span className="pricing-name">{pkg.name}</span>
                 
-                {/* Sauberer Preis oben rechts ohne störende Zusätze */}
+                {/* Hauptpreis oben rechts: Stundensatz nur anhängen, wenn 'hourly' gesetzt ist */}
                 <span className="pricing-price">
                   {pkg.base.toLocaleString("de-DE")},– €
                   {pkg.hourly ? ` + ${pkg.hourly} €/h` : ""}
@@ -72,7 +72,11 @@ export function PricingList({ packages, addons }: { packages: Package[]; addons:
                       Option: {pkg.special.label}
                     </p>
                     
-                    <p className="pricing-special-price">
+                    {/* Preis dezenter formatiert (nicht zu groß, normale Schriftstärke) */}
+                    <p 
+                      className="pricing-special-price" 
+                      style={{ fontSize: "0.95rem", fontWeight: "normal", opacity: 0.9 }}
+                    >
                       {pkg.special.pricePrefix ? `${pkg.special.pricePrefix} ` : ""}
                       {typeof pkg.special.price === "number"
                         ? `${pkg.special.price.toLocaleString("de-DE")},– €`

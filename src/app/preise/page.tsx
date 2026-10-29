@@ -138,6 +138,8 @@ const packages: Package[] = [
       label: "Mit Fotograf & Fotobox",
       price: "Preis auf Anfrage",
       note: "Grundpreis 1.400 € gilt nur für Videografie · Stundensätze nach Absprache bei längerer Begleitung · Fotobox inklusive",
+      price: "Auf Anfrage",
+      note: "kein Stundensatz · Fotobox inklusive",
     },
   },
 ];

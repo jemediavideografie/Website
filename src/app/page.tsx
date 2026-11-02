@@ -116,7 +116,7 @@ export default function HomePage() {
           </div>
           <div>
             <Image
-              src="/images/portrait.jpg"
+              src="/images/portrait_new.JPG"
               alt="Joel – Videograf von JE Media"
               width={620}
               height={760}

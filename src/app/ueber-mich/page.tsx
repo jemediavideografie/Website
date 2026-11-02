@@ -66,7 +66,7 @@ export default function AboutPage() {
           </div>
           <div>
             <Image
-              src="/images/portrait.jpg"
+              src="/images/portrait_new.jpg"
               alt="Joel – Hochzeitsvideograf aus Espelkamp, NRW"
               width={620}
               height={760}

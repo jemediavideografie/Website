@@ -530,6 +530,43 @@ a {
   outline: none;
 }
 
+.contact-form .privacy-check label {
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 0.6rem;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.contact-form .privacy-check input[type="checkbox"] {
+  width: 1.1rem;
+  height: 1.1rem;
+  padding: 0;
+  margin-top: 0.15rem;
+  flex-shrink: 0;
+  accent-color: var(--accent);
+  cursor: pointer;
+}
+
+.contact-form .privacy-check a {
+  color: var(--text);
+  text-decoration: underline;
+}
+
+.contact-form .field-error {
+  color: #b3261e;
+  font-size: 0.85rem;
+  font-weight: 400;
+}
+
+.contact-form .honeypot {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
 .contact-form textarea {
   resize: vertical;
   min-height: 140px;

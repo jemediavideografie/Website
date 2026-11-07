@@ -1,11 +1,12 @@
 "use client";
 
+import Link from "next/link";
 import { FormEvent, useState } from "react";
 
 type SubmitState = "idle" | "loading" | "success" | "error";
 
 type FieldErrors = Partial<Record<
-  "name" | "email" | "preferredContact" | "instagramHandle" | "projectType" | "weddingLocation" | "weddingDate" | "carLocation" | "carLocationOther" | "preferredDate" | "details",
+  "name" | "email" | "preferredContact" | "instagramHandle" | "projectType" | "weddingLocation" | "weddingDate" | "carLocation" | "carLocationOther" | "preferredDate" | "details" | "privacy",
   string
 >>;
 
@@ -30,6 +31,7 @@ function validateClient(data: Record<string, string>): FieldErrors {
   }
   if (!data.projectType) errors.projectType = "Bitte eine Projektart angeben.";
   if (!data.details || data.details.trim().length < 20) errors.details = "Bitte eine aussagekräftige Nachricht eingeben (mind. 20 Zeichen).";
+  if (data.privacy !== "on") errors.privacy = "Bitte bestätige, dass du die Datenschutzerklärung zur Kenntnis genommen hast.";
   return errors;
 }
 
@@ -330,6 +332,23 @@ export function ContactForm() {
         Website
         <input name="website" type="text" tabIndex={-1} autoComplete="off" />
       </label>
+
+      <div className="privacy-check">
+        <label>
+          <input
+            name="privacy"
+            type="checkbox"
+            required
+            aria-describedby={fieldErrors.privacy ? "err-privacy" : undefined}
+            aria-invalid={!!fieldErrors.privacy}
+          />
+          <span>
+            Ich habe die <Link href="/datenschutz" target="_blank">Datenschutzerklärung</Link> zur Kenntnis
+            genommen. *
+          </span>
+        </label>
+        {fieldErrors.privacy && <span id="err-privacy" className="field-error">{fieldErrors.privacy}</span>}
+      </div>
 
       <button className="btn" type="submit" disabled={submitState === "loading"}>
         {submitState === "loading" ? "Wird gesendet ..." : "Nachricht senden"}
